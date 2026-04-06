@@ -249,28 +249,3 @@ ScatterPlot <- component('ScatterPlot')
 #' @export
 SparkLineChart <- component('SparkLineChart')
 
-
-#' @rdname BarSeries
-#' @export
-BarSeries <- component('BarSeries')
-
-
-#' @rdname LineSeries
-#' @export
-LineSeries <- component('LineSeries')
-
-#' @rdname PieSeries
-#' @export
-PieSeries <- component('PieSeries')
-
-#' @rdname RadarSeries
-#' @export
-RadarSeries <- component('RadarSeries')
-
-#' @rdname ScatterSeries
-#' @export
-ScatterSeries <- component('ScatterSeries')
-
-#' @rdname LegendItemParams
-#' @export
-LegendItemParams <- component('LegendItemParams')
