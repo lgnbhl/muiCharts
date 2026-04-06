@@ -125,7 +125,6 @@ Cross-cutting features that apply to all chart types:
 
 - [Shiny](shiny.html) — reactive charts, click events, and dashboards
 - [Quarto](quarto.html) — HTML documents, dashboards, and tabsets
-- [Error Bars](ErrorBar.html) — custom error bar components
 
 ### Contribute
 
