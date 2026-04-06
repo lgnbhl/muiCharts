@@ -88,7 +88,8 @@ LineChart(
     list(
       scaleType = "linear",
       dataKey = "release",
-      label = "Release Year"
+      label = "Release Year",
+      valueFormatter = JS("(value) => String(value)")
     )
   ),
   series = list(
