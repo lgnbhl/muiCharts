@@ -38,7 +38,7 @@ library(muiCharts)
 
 ## Basic example
 
-```{r}
+```r
 library(dplyr)
 
 starwars_summary <- starwars |>

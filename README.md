@@ -35,20 +35,7 @@ library(muiCharts)
 
 ``` r
 library(dplyr)
-```
 
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 starwars_summary <- starwars |>
   filter(species %in% c("Human", "Droid", "Wookiee")) |>
   group_by(species) |>
@@ -66,11 +53,6 @@ BarChart(
   height = 300
 )
 ```
-
-<div class="react-container" data-react-id="ampfdbyxltluicislmmd">
-<script class="react-data" type="application/json">{"type":"element","module":"@mui/x-charts","name":"BarChart","props":{"type":"raw","value":{"dataset":[{"species":"Droid","height":131.2,"mass":69.75},{"species":"Human","height":178,"mass":81.31},{"species":"Wookiee","height":231,"mass":124}],"xAxis":[{"scaleType":"band","dataKey":"species"}],"series":[{"dataKey":"height","label":"Height"},{"dataKey":"mass","label":"Mass"}],"height":300}}}</script>
-<script>jsmodule['@/shiny.react'].findAndRenderReactData('ampfdbyxltluicislmmd')</script>
-</div>
 
 <img src="https://raw.githubusercontent.com/lgnbhl/muiCharts/refs/heads/master/man/Figures/BarChart.png" alt="BarChart example" style="padding:1px;border:thin solid black;"/>
 
