@@ -1,5 +1,8 @@
 test_that("AnimatedArea() returns shiny.tag, correct name and value", {
-  expect_equal(class(AnimatedArea()), "shiny.tag")
+  expect_equal(
+    class(AnimatedArea()),
+    c("muiCharts", "shiny.tag")
+  )
   expect_equal(
     environment(AnimatedArea()[["children"]][[2]])[["data"]][["name"]],
     "AnimatedArea"
@@ -12,7 +15,10 @@ test_that("AnimatedArea() returns shiny.tag, correct name and value", {
   )
 })
 test_that("AnimatedLine() returns shiny.tag, correct name and value", {
-  expect_equal(class(AnimatedLine()), "shiny.tag")
+  expect_equal(
+    class(AnimatedLine()),
+    c("muiCharts", "shiny.tag")
+  )
   expect_equal(
     environment(AnimatedLine()[["children"]][[2]])[["data"]][["name"]],
     "AnimatedLine"
@@ -25,7 +31,7 @@ test_that("AnimatedLine() returns shiny.tag, correct name and value", {
   )
 })
 test_that("AreaElement() returns shiny.tag, correct name and value", {
-  expect_equal(class(AreaElement()), "shiny.tag")
+  expect_equal(class(AreaElement()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(AreaElement()[["children"]][[2]])[["data"]][["name"]],
     "AreaElement"
@@ -38,7 +44,7 @@ test_that("AreaElement() returns shiny.tag, correct name and value", {
   )
 })
 test_that("AreaPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(AreaPlot()), "shiny.tag")
+  expect_equal(class(AreaPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(AreaPlot()[["children"]][[2]])[["data"]][["name"]],
     "AreaPlot"
@@ -51,7 +57,7 @@ test_that("AreaPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("BarChart() returns shiny.tag, correct name and value", {
-  expect_equal(class(BarChart()), "shiny.tag")
+  expect_equal(class(BarChart()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(BarChart()[["children"]][[2]])[["data"]][["name"]],
     "BarChart"
@@ -64,7 +70,7 @@ test_that("BarChart() returns shiny.tag, correct name and value", {
   )
 })
 test_that("BarElement() returns shiny.tag, correct name and value", {
-  expect_equal(class(BarElement()), "shiny.tag")
+  expect_equal(class(BarElement()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(BarElement()[["children"]][[2]])[["data"]][["name"]],
     "BarElement"
@@ -77,7 +83,7 @@ test_that("BarElement() returns shiny.tag, correct name and value", {
   )
 })
 test_that("BarLabel() returns shiny.tag, correct name and value", {
-  expect_equal(class(BarLabel()), "shiny.tag")
+  expect_equal(class(BarLabel()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(BarLabel()[["children"]][[2]])[["data"]][["name"]],
     "BarLabel"
@@ -90,7 +96,7 @@ test_that("BarLabel() returns shiny.tag, correct name and value", {
   )
 })
 test_that("BarPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(BarPlot()), "shiny.tag")
+  expect_equal(class(BarPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(BarPlot()[["children"]][[2]])[["data"]][["name"]],
     "BarPlot"
@@ -103,7 +109,7 @@ test_that("BarPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartContainer() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartContainer()), "shiny.tag")
+  expect_equal(class(ChartContainer()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartContainer()[["children"]][[2]])[["data"]][["name"]],
     "ChartContainer"
@@ -116,7 +122,7 @@ test_that("ChartContainer() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartDataProvider() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartDataProvider()), "shiny.tag")
+  expect_equal(class(ChartDataProvider()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartDataProvider()[["children"]][[2]])[["data"]][["name"]],
     "ChartDataProvider"
@@ -129,7 +135,7 @@ test_that("ChartDataProvider() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsAxis() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsAxis()), "shiny.tag")
+  expect_equal(class(ChartsAxis()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsAxis()[["children"]][[2]])[["data"]][["name"]],
     "ChartsAxis"
@@ -142,7 +148,7 @@ test_that("ChartsAxis() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsAxisHighlight() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsAxisHighlight()), "shiny.tag")
+  expect_equal(class(ChartsAxisHighlight()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsAxisHighlight()[["children"]][[2]])[["data"]][["name"]],
     "ChartsAxisHighlight"
@@ -155,7 +161,7 @@ test_that("ChartsAxisHighlight() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsAxisTooltipContent() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsAxisTooltipContent()), "shiny.tag")
+  expect_equal(class(ChartsAxisTooltipContent()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsAxisTooltipContent()[["children"]][[2]])[["data"]][[
       "name"
@@ -170,7 +176,7 @@ test_that("ChartsAxisTooltipContent() returns shiny.tag, correct name and value"
   )
 })
 test_that("ChartsClipPath() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsClipPath()), "shiny.tag")
+  expect_equal(class(ChartsClipPath()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsClipPath()[["children"]][[2]])[["data"]][["name"]],
     "ChartsClipPath"
@@ -183,7 +189,7 @@ test_that("ChartsClipPath() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsGrid() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsGrid()), "shiny.tag")
+  expect_equal(class(ChartsGrid()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsGrid()[["children"]][[2]])[["data"]][["name"]],
     "ChartsGrid"
@@ -196,7 +202,7 @@ test_that("ChartsGrid() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsItemTooltipContent() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsItemTooltipContent()), "shiny.tag")
+  expect_equal(class(ChartsItemTooltipContent()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsItemTooltipContent()[["children"]][[2]])[["data"]][[
       "name"
@@ -211,7 +217,7 @@ test_that("ChartsItemTooltipContent() returns shiny.tag, correct name and value"
   )
 })
 test_that("ChartsLegend() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsLegend()), "shiny.tag")
+  expect_equal(class(ChartsLegend()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsLegend()[["children"]][[2]])[["data"]][["name"]],
     "ChartsLegend"
@@ -224,7 +230,7 @@ test_that("ChartsLegend() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsLocalizationProvider() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsLocalizationProvider()), "shiny.tag")
+  expect_equal(class(ChartsLocalizationProvider()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsLocalizationProvider()[["children"]][[2]])[["data"]][[
       "name"
@@ -239,7 +245,7 @@ test_that("ChartsLocalizationProvider() returns shiny.tag, correct name and valu
   )
 })
 test_that("ChartsReferenceLine() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsReferenceLine()), "shiny.tag")
+  expect_equal(class(ChartsReferenceLine()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsReferenceLine()[["children"]][[2]])[["data"]][["name"]],
     "ChartsReferenceLine"
@@ -252,7 +258,7 @@ test_that("ChartsReferenceLine() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsSurface() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsSurface()), "shiny.tag")
+  expect_equal(class(ChartsSurface()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsSurface()[["children"]][[2]])[["data"]][["name"]],
     "ChartsSurface"
@@ -265,7 +271,7 @@ test_that("ChartsSurface() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsText() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsText()), "shiny.tag")
+  expect_equal(class(ChartsText()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsText()[["children"]][[2]])[["data"]][["name"]],
     "ChartsText"
@@ -278,7 +284,7 @@ test_that("ChartsText() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsTooltip() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsTooltip()), "shiny.tag")
+  expect_equal(class(ChartsTooltip()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsTooltip()[["children"]][[2]])[["data"]][["name"]],
     "ChartsTooltip"
@@ -291,7 +297,7 @@ test_that("ChartsTooltip() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsTooltipContainer() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsTooltipContainer()), "shiny.tag")
+  expect_equal(class(ChartsTooltipContainer()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsTooltipContainer()[["children"]][[2]])[["data"]][[
       "name"
@@ -306,7 +312,7 @@ test_that("ChartsTooltipContainer() returns shiny.tag, correct name and value", 
   )
 })
 test_that("ChartsWrapper() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsWrapper()), "shiny.tag")
+  expect_equal(class(ChartsWrapper()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsWrapper()[["children"]][[2]])[["data"]][["name"]],
     "ChartsWrapper"
@@ -319,7 +325,7 @@ test_that("ChartsWrapper() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsXAxis() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsXAxis()), "shiny.tag")
+  expect_equal(class(ChartsXAxis()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsXAxis()[["children"]][[2]])[["data"]][["name"]],
     "ChartsXAxis"
@@ -332,7 +338,7 @@ test_that("ChartsXAxis() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ChartsYAxis() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartsYAxis()), "shiny.tag")
+  expect_equal(class(ChartsYAxis()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ChartsYAxis()[["children"]][[2]])[["data"]][["name"]],
     "ChartsYAxis"
@@ -345,7 +351,7 @@ test_that("ChartsYAxis() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ContinuousColorLegend() returns shiny.tag, correct name and value", {
-  expect_equal(class(ContinuousColorLegend()), "shiny.tag")
+  expect_equal(class(ContinuousColorLegend()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ContinuousColorLegend()[["children"]][[2]])[["data"]][["name"]],
     "ContinuousColorLegend"
@@ -358,7 +364,7 @@ test_that("ContinuousColorLegend() returns shiny.tag, correct name and value", {
   )
 })
 test_that("Gauge() returns shiny.tag, correct name and value", {
-  expect_equal(class(Gauge()), "shiny.tag")
+  expect_equal(class(Gauge()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(Gauge()[["children"]][[2]])[["data"]][["name"]],
     "Gauge"
@@ -371,7 +377,7 @@ test_that("Gauge() returns shiny.tag, correct name and value", {
   )
 })
 test_that("GaugeContainer() returns shiny.tag, correct name and value", {
-  expect_equal(class(GaugeContainer()), "shiny.tag")
+  expect_equal(class(GaugeContainer()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(GaugeContainer()[["children"]][[2]])[["data"]][["name"]],
     "GaugeContainer"
@@ -384,7 +390,7 @@ test_that("GaugeContainer() returns shiny.tag, correct name and value", {
   )
 })
 test_that("GaugeReferenceArc() returns shiny.tag, correct name and value", {
-  expect_equal(class(GaugeReferenceArc()), "shiny.tag")
+  expect_equal(class(GaugeReferenceArc()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(GaugeReferenceArc()[["children"]][[2]])[["data"]][["name"]],
     "GaugeReferenceArc"
@@ -397,7 +403,7 @@ test_that("GaugeReferenceArc() returns shiny.tag, correct name and value", {
   )
 })
 test_that("GaugeValueArc() returns shiny.tag, correct name and value", {
-  expect_equal(class(GaugeValueArc()), "shiny.tag")
+  expect_equal(class(GaugeValueArc()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(GaugeValueArc()[["children"]][[2]])[["data"]][["name"]],
     "GaugeValueArc"
@@ -410,7 +416,7 @@ test_that("GaugeValueArc() returns shiny.tag, correct name and value", {
   )
 })
 test_that("GaugeValueText() returns shiny.tag, correct name and value", {
-  expect_equal(class(GaugeValueText()), "shiny.tag")
+  expect_equal(class(GaugeValueText()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(GaugeValueText()[["children"]][[2]])[["data"]][["name"]],
     "GaugeValueText"
@@ -423,7 +429,7 @@ test_that("GaugeValueText() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LineChart() returns shiny.tag, correct name and value", {
-  expect_equal(class(LineChart()), "shiny.tag")
+  expect_equal(class(LineChart()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LineChart()[["children"]][[2]])[["data"]][["name"]],
     "LineChart"
@@ -436,7 +442,7 @@ test_that("LineChart() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LineElement() returns shiny.tag, correct name and value", {
-  expect_equal(class(LineElement()), "shiny.tag")
+  expect_equal(class(LineElement()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LineElement()[["children"]][[2]])[["data"]][["name"]],
     "LineElement"
@@ -449,7 +455,7 @@ test_that("LineElement() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LineHighlightElement() returns shiny.tag, correct name and value", {
-  expect_equal(class(LineHighlightElement()), "shiny.tag")
+  expect_equal(class(LineHighlightElement()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LineHighlightElement()[["children"]][[2]])[["data"]][["name"]],
     "LineHighlightElement"
@@ -462,7 +468,7 @@ test_that("LineHighlightElement() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LineHighlightPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(LineHighlightPlot()), "shiny.tag")
+  expect_equal(class(LineHighlightPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LineHighlightPlot()[["children"]][[2]])[["data"]][["name"]],
     "LineHighlightPlot"
@@ -475,7 +481,7 @@ test_that("LineHighlightPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LinePlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(LinePlot()), "shiny.tag")
+  expect_equal(class(LinePlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LinePlot()[["children"]][[2]])[["data"]][["name"]],
     "LinePlot"
@@ -488,7 +494,7 @@ test_that("LinePlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("MarkElement() returns shiny.tag, correct name and value", {
-  expect_equal(class(MarkElement()), "shiny.tag")
+  expect_equal(class(MarkElement()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(MarkElement()[["children"]][[2]])[["data"]][["name"]],
     "MarkElement"
@@ -501,7 +507,7 @@ test_that("MarkElement() returns shiny.tag, correct name and value", {
   )
 })
 test_that("MarkPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(MarkPlot()), "shiny.tag")
+  expect_equal(class(MarkPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(MarkPlot()[["children"]][[2]])[["data"]][["name"]],
     "MarkPlot"
@@ -514,7 +520,7 @@ test_that("MarkPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PieArc() returns shiny.tag, correct name and value", {
-  expect_equal(class(PieArc()), "shiny.tag")
+  expect_equal(class(PieArc()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PieArc()[["children"]][[2]])[["data"]][["name"]],
     "PieArc"
@@ -527,7 +533,7 @@ test_that("PieArc() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PieArcLabel() returns shiny.tag, correct name and value", {
-  expect_equal(class(PieArcLabel()), "shiny.tag")
+  expect_equal(class(PieArcLabel()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PieArcLabel()[["children"]][[2]])[["data"]][["name"]],
     "PieArcLabel"
@@ -540,7 +546,7 @@ test_that("PieArcLabel() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PieArcLabelPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(PieArcLabelPlot()), "shiny.tag")
+  expect_equal(class(PieArcLabelPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PieArcLabelPlot()[["children"]][[2]])[["data"]][["name"]],
     "PieArcLabelPlot"
@@ -553,7 +559,7 @@ test_that("PieArcLabelPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PieArcPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(PieArcPlot()), "shiny.tag")
+  expect_equal(class(PieArcPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PieArcPlot()[["children"]][[2]])[["data"]][["name"]],
     "PieArcPlot"
@@ -566,7 +572,7 @@ test_that("PieArcPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PiecewiseColorLegend() returns shiny.tag, correct name and value", {
-  expect_equal(class(PiecewiseColorLegend()), "shiny.tag")
+  expect_equal(class(PiecewiseColorLegend()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PiecewiseColorLegend()[["children"]][[2]])[["data"]][["name"]],
     "PiecewiseColorLegend"
@@ -579,7 +585,7 @@ test_that("PiecewiseColorLegend() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PieChart() returns shiny.tag, correct name and value", {
-  expect_equal(class(PieChart()), "shiny.tag")
+  expect_equal(class(PieChart()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PieChart()[["children"]][[2]])[["data"]][["name"]],
     "PieChart"
@@ -592,7 +598,7 @@ test_that("PieChart() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PiePlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(PiePlot()), "shiny.tag")
+  expect_equal(class(PiePlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PiePlot()[["children"]][[2]])[["data"]][["name"]],
     "PiePlot"
@@ -605,7 +611,7 @@ test_that("PiePlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarAxis() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarAxis()), "shiny.tag")
+  expect_equal(class(RadarAxis()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarAxis()[["children"]][[2]])[["data"]][["name"]],
     "RadarAxis"
@@ -618,7 +624,7 @@ test_that("RadarAxis() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarAxisHighlight() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarAxisHighlight()), "shiny.tag")
+  expect_equal(class(RadarAxisHighlight()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarAxisHighlight()[["children"]][[2]])[["data"]][["name"]],
     "RadarAxisHighlight"
@@ -631,7 +637,7 @@ test_that("RadarAxisHighlight() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarChart() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarChart()), "shiny.tag")
+  expect_equal(class(RadarChart()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarChart()[["children"]][[2]])[["data"]][["name"]],
     "RadarChart"
@@ -644,7 +650,7 @@ test_that("RadarChart() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarGrid() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarGrid()), "shiny.tag")
+  expect_equal(class(RadarGrid()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarGrid()[["children"]][[2]])[["data"]][["name"]],
     "RadarGrid"
@@ -657,7 +663,7 @@ test_that("RadarGrid() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarMetricLabels() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarMetricLabels()), "shiny.tag")
+  expect_equal(class(RadarMetricLabels()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarMetricLabels()[["children"]][[2]])[["data"]][["name"]],
     "RadarMetricLabels"
@@ -670,7 +676,7 @@ test_that("RadarMetricLabels() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarSeriesArea() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarSeriesArea()), "shiny.tag")
+  expect_equal(class(RadarSeriesArea()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarSeriesArea()[["children"]][[2]])[["data"]][["name"]],
     "RadarSeriesArea"
@@ -683,7 +689,7 @@ test_that("RadarSeriesArea() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarSeriesMarks() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarSeriesMarks()), "shiny.tag")
+  expect_equal(class(RadarSeriesMarks()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarSeriesMarks()[["children"]][[2]])[["data"]][["name"]],
     "RadarSeriesMarks"
@@ -696,7 +702,7 @@ test_that("RadarSeriesMarks() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarSeriesPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarSeriesPlot()), "shiny.tag")
+  expect_equal(class(RadarSeriesPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarSeriesPlot()[["children"]][[2]])[["data"]][["name"]],
     "RadarSeriesPlot"
@@ -709,7 +715,7 @@ test_that("RadarSeriesPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("Scatter() returns shiny.tag, correct name and value", {
-  expect_equal(class(Scatter()), "shiny.tag")
+  expect_equal(class(Scatter()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(Scatter()[["children"]][[2]])[["data"]][["name"]],
     "Scatter"
@@ -722,7 +728,7 @@ test_that("Scatter() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ScatterChart() returns shiny.tag, correct name and value", {
-  expect_equal(class(ScatterChart()), "shiny.tag")
+  expect_equal(class(ScatterChart()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ScatterChart()[["children"]][[2]])[["data"]][["name"]],
     "ScatterChart"
@@ -735,7 +741,7 @@ test_that("ScatterChart() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ScatterPlot() returns shiny.tag, correct name and value", {
-  expect_equal(class(ScatterPlot()), "shiny.tag")
+  expect_equal(class(ScatterPlot()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ScatterPlot()[["children"]][[2]])[["data"]][["name"]],
     "ScatterPlot"
@@ -748,7 +754,7 @@ test_that("ScatterPlot() returns shiny.tag, correct name and value", {
   )
 })
 test_that("SparkLineChart() returns shiny.tag, correct name and value", {
-  expect_equal(class(SparkLineChart()), "shiny.tag")
+  expect_equal(class(SparkLineChart()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(SparkLineChart()[["children"]][[2]])[["data"]][["name"]],
     "SparkLineChart"
@@ -761,7 +767,7 @@ test_that("SparkLineChart() returns shiny.tag, correct name and value", {
   )
 })
 test_that("BarSeries() returns shiny.tag, correct name and value", {
-  expect_equal(class(BarSeries()), "shiny.tag")
+  expect_equal(class(BarSeries()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(BarSeries()[["children"]][[2]])[["data"]][["name"]],
     "BarSeries"
@@ -774,7 +780,7 @@ test_that("BarSeries() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LineSeries() returns shiny.tag, correct name and value", {
-  expect_equal(class(LineSeries()), "shiny.tag")
+  expect_equal(class(LineSeries()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LineSeries()[["children"]][[2]])[["data"]][["name"]],
     "LineSeries"
@@ -787,7 +793,7 @@ test_that("LineSeries() returns shiny.tag, correct name and value", {
   )
 })
 test_that("PieSeries() returns shiny.tag, correct name and value", {
-  expect_equal(class(PieSeries()), "shiny.tag")
+  expect_equal(class(PieSeries()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(PieSeries()[["children"]][[2]])[["data"]][["name"]],
     "PieSeries"
@@ -800,7 +806,7 @@ test_that("PieSeries() returns shiny.tag, correct name and value", {
   )
 })
 test_that("RadarSeries() returns shiny.tag, correct name and value", {
-  expect_equal(class(RadarSeries()), "shiny.tag")
+  expect_equal(class(RadarSeries()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(RadarSeries()[["children"]][[2]])[["data"]][["name"]],
     "RadarSeries"
@@ -813,7 +819,7 @@ test_that("RadarSeries() returns shiny.tag, correct name and value", {
   )
 })
 test_that("ScatterSeries() returns shiny.tag, correct name and value", {
-  expect_equal(class(ScatterSeries()), "shiny.tag")
+  expect_equal(class(ScatterSeries()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(ScatterSeries()[["children"]][[2]])[["data"]][["name"]],
     "ScatterSeries"
@@ -826,7 +832,7 @@ test_that("ScatterSeries() returns shiny.tag, correct name and value", {
   )
 })
 test_that("LegendItemParams() returns shiny.tag, correct name and value", {
-  expect_equal(class(LegendItemParams()), "shiny.tag")
+  expect_equal(class(LegendItemParams()), c("muiCharts", "shiny.tag"))
   expect_equal(
     environment(LegendItemParams()[["children"]][[2]])[["data"]][["name"]],
     "LegendItemParams"
