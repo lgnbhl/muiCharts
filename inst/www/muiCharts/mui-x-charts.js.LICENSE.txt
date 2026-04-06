@@ -1,8 +1,8 @@
 /**
  * @license React
- * react-is.production.js
+ * react-is.production.min.js
  *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -39,7 +39,7 @@
  */
 
 /**
- * @mui/private-theming v7.3.6
+ * @mui/private-theming v7.3.9
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -47,7 +47,7 @@
  */
 
 /**
- * @mui/styled-engine v7.3.6
+ * @mui/styled-engine v7.3.9
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -55,7 +55,7 @@
  */
 
 /**
- * @mui/system v7.3.6
+ * @mui/system v7.3.9
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -63,18 +63,9 @@
  */
 
 /**
- * @mui/x-charts v8.23.0
+ * @mui/x-charts v8.28.2
  *
  * @license MIT
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/** @license React v16.13.1
- * react-is.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
