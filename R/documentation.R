@@ -1253,3 +1253,124 @@ NULL
 #' @md
 #' @name SparkLineChart
 NULL
+
+#' ChartsAxisHighlight
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-axis-highlight/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsAxisHighlight
+NULL
+
+#' ChartsSurface
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-surface/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsSurface
+NULL
+
+#' LineHighlightElement
+#'
+#' @description \url{https://mui.com/x/api/charts/line-highlight-element/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name LineHighlightElement
+NULL
+
+#' PieArcLabel
+#'
+#' @description \url{https://mui.com/x/api/charts/pie-arc-label/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name PieArcLabel
+NULL
+
+#' RadarMetricLabels
+#'
+#' @description \url{https://mui.com/x/api/charts/radar-metric-labels/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name RadarMetricLabels
+NULL
+
+#' BarSeries
+#'
+#' @description \url{https://mui.com/x/api/charts/bar-series/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name BarSeries
+NULL
+
+#' LineSeries
+#'
+#' @description \url{https://mui.com/x/api/charts/line-series/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name LineSeries
+NULL
+
+#' PieSeries
+#'
+#' @description \url{https://mui.com/x/api/charts/pie-series/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name PieSeries
+NULL
+
+#' RadarSeries
+#'
+#' @description \url{https://mui.com/x/api/charts/radar-series/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name RadarSeries
+NULL
+
+#' ScatterSeries
+#'
+#' @description \url{https://mui.com/x/api/charts/scatter-series/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ScatterSeries
+NULL
+
+#' LegendItemParams
+#'
+#' @description \url{https://mui.com/x/api/charts/legend-item-params/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name LegendItemParams
+NULL
