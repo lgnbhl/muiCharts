@@ -1,0 +1,74 @@
+url: https://felixluginbuhl.com/muiCharts
+template:
+  bootstrap: 5
+  bootswatch: litera
+  ganalytics: UA-158089797-1
+  bslib:
+    primary: "#3399ff"
+
+authors:
+  Felix Luginbuhl:
+    href: "https://felixluginbuhl.com"
+
+llm-docs: true
+
+navbar:
+  left:
+  - text: Home
+    href: index.html
+  - text: Get started
+    href: articles/introduction.html
+  - text: Chart Types
+    menu:
+    - text: Bar Charts
+      href: articles/bars.html
+    - text: Line Charts
+      href: articles/lines.html
+    - text: Area Charts
+      href: articles/areas.html
+    - text: Pie Charts
+      href: articles/pies.html
+    - text: Scatter Charts
+      href: articles/scatter.html
+    - text: Radar Charts
+      href: articles/radar.html
+    - text: Sparkline Charts
+      href: articles/sparkline.html
+    - text: Gauge Charts
+      href: articles/gauge.html
+  - text: Features
+    menu:
+    - text: Axis & Grid
+      href: articles/axis.html
+    - text: Tooltip
+      href: articles/tooltip.html
+    - text: Legend
+      href: articles/legend.html
+    - text: Highlighting
+      href: articles/highlighting.html
+    - text: Styling
+      href: articles/styling.html
+    - text: Composition
+      href: articles/composition.html
+  - text: Custom
+    menu:
+    - text: Shiny
+      href: articles/shiny.html
+    - text: Quarto
+      href: articles/quarto.html
+  - text: Reference
+    href: reference/index.html
+  - text: News
+    href: news/index.html
+
+  right:
+   - icon: fa-linkedin
+     href: https://www.linkedin.com/in/felixluginbuhl
+   - icon: fa-twitter
+     href: https://twitter.com/FelixLuginbuhl
+   - icon: fa-github
+     href: https://github.com/lgnbhl/muiCharts
+   - icon: fa-home
+     href: http://felixluginbuhl.com
+
+

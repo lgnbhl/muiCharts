@@ -1,0 +1,17 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
+.Renviron
+js/node_modules
+js/README.md
+docs
+dev
+data-raw
+inst/doc
+/.quarto/
+pkgdown
+CRAN-SUBMISSION
+.RData

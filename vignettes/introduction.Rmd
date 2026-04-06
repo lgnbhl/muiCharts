@@ -1,0 +1,134 @@
+---
+title: "Introduction"
+format:
+  html:
+    minimal: true
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Install
+
+You can install the development version of muiCharts like so:
+
+``` r
+remotes::install_github("lgnbhl/muiCharts")
+```
+
+## Quick Start
+
+```{r message=FALSE, warning=FALSE}
+library(muiCharts)
+library(dplyr)
+
+starwars_summary <- dplyr::starwars |>
+  filter(species %in% c("Human", "Droid", "Wookiee")) |>
+  group_by(species) |>
+  summarise(height = mean(height, na.rm = TRUE), mass = mean(mass, na.rm = TRUE))
+```
+
+```{r}
+BarChart(
+  dataset = starwars_summary,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "species",
+      label = "Species"
+    )
+  ),
+  series = list(
+    list(dataKey = "height", label = "Height (cm)"),
+    list(dataKey = "mass", label = "Mass (kg)")
+  ),
+  grid = list(horizontal = TRUE),
+  height = 300
+)
+```
+
+## Using JavaScript
+
+Use the `JS()` function to pass JavaScript code, for example to customize tooltip values with `valueFormatter`:
+
+```{r}
+customValueFormatter <- function(category){
+  JS(
+    paste0(
+      "function(value){",
+      "if (value === null) { return 'None' }",
+      "return `${value} ", category, "`}"
+    )
+  )
+}
+
+BarChart(
+  dataset = starwars_summary,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "species",
+      label = "Species",
+      valueFormatter = JS("(value) => `${value}`")
+    )
+  ),
+  series = list(
+    list(
+      dataKey = "height",
+      label = "Height (cm)",
+      valueFormatter = customValueFormatter("cm")
+    ),
+    list(
+      dataKey = "mass",
+      label = "Mass (kg)",
+      valueFormatter = customValueFormatter("kg")
+    )
+  ),
+  grid = list(horizontal = TRUE),
+  height = 400
+)
+```
+
+## Chart Types
+
+muiCharts provides the following chart types, each with a dedicated article:
+
+- [Bar Charts](bars.html) — vertical and horizontal bar charts with grouping and stacking
+- [Line Charts](lines.html) — line charts with marks, curves, and null handling
+- [Area Charts](areas.html) — filled area charts with stacking and baselines
+- [Pie Charts](pies.html) — pie and donut charts with arc labels
+- [Scatter Charts](scatter.html) — scatter plots with Voronoi interaction
+- [Radar Charts](radar.html) — radar charts for multi-metric comparisons
+- [Sparkline Charts](sparkline.html) — compact inline charts
+- [Gauge Charts](gauge.html) — gauge displays for single metrics
+
+## Features
+
+Cross-cutting features that apply to all chart types:
+
+- [Axis & Grid](axis.html) — scale types, labels, value formatters, grid lines, margins
+- [Tooltip](tooltip.html) — tooltip triggers, formatting, and composition
+- [Legend](legend.html) — legend position, direction, and color legends
+- [Highlighting](highlighting.html) — highlight and fade interactions
+- [Styling](styling.html) — colors, color maps, and CSS overrides with `sx`
+- [Composition](composition.html) — build charts from individual sub-components
+
+## Integration
+
+- [Shiny](shiny.html) — reactive charts, click events, and dashboards
+- [Quarto](quarto.html) — HTML documents, dashboards, and tabsets
+- [Error Bars](ErrorBar.html) — custom error bar components
+
+### Contribute
+
+If you have any issue, question or want to contribute with a pull request, don't hesitate to write me on https://github.com/lgnbhl/muiCharts
+
+For updates follow [Felix Luginbuhl](https://linkedin.com/in/FelixLuginbuhl) on LinkedIn.
