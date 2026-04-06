@@ -8,8 +8,8 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/muiCharts)](https://CRAN.R-project.org/package=muiCharts)
 [![R-CMD-check](https://github.com/lgnbhl/muiCharts/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lgnbhl/muiCharts/actions/workflows/R-CMD-check.yaml)
-[![](https://img.shields.io/badge/@mui/x--charts-%5E8.16.0-blue.svg)](https://mui.com/x/react-charts/)
 [![](https://img.shields.io/badge/react-18.3.1-blue.svg)](https://mui.com/x/react-charts/)
+[![](https://img.shields.io/badge/react--dom-18.3.1-blue.svg)](https://mui.com/x/react-charts/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow-E4405F?style=social&logo=linkedin)](https://www.linkedin.com/in/FelixLuginbuhl)
 <!-- badges: end -->
 
@@ -18,22 +18,37 @@ data visualization from R.
 
 ## Install and load
 
-You can install the development version of muiCharts like so:
+You can install the development version of **muiCharts** like so:
 
 ``` r
 remotes::install_github("lgnbhl/muiCharts")
+```
 
+``` r
 library(muiCharts)
 ```
 
 **Read the full documentation with examples
-[here](https://lgnbhl.github.io/muiCharts/articles/introduction.html).**
+[here](https://lgnbhl.github.io/muiCharts).**
 
 ## Basic example
 
 ``` r
 library(dplyr)
+```
 
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
 starwars_summary <- starwars |>
   filter(species %in% c("Human", "Droid", "Wookiee")) |>
   group_by(species) |>
@@ -52,7 +67,12 @@ BarChart(
 )
 ```
 
-<img src="https://raw.githubusercontent.com/lgnbhl/muiCharts/refs/heads/main/man/figures/BarChart.png" alt="BarChart" style="padding:1px;border:thin solid black;"/>
+<div class="react-container" data-react-id="ampfdbyxltluicislmmd">
+<script class="react-data" type="application/json">{"type":"element","module":"@mui/x-charts","name":"BarChart","props":{"type":"raw","value":{"dataset":[{"species":"Droid","height":131.2,"mass":69.75},{"species":"Human","height":178,"mass":81.31},{"species":"Wookiee","height":231,"mass":124}],"xAxis":[{"scaleType":"band","dataKey":"species"}],"series":[{"dataKey":"height","label":"Height"},{"dataKey":"mass","label":"Mass"}],"height":300}}}</script>
+<script>jsmodule['@/shiny.react'].findAndRenderReactData('ampfdbyxltluicislmmd')</script>
+</div>
+
+<img src="https://raw.githubusercontent.com/lgnbhl/muiCharts/refs/heads/master/man/Figures/BarChart.png" alt="BarChart example" style="padding:1px;border:thin solid black;"/>
 
 ### Contribute
 
