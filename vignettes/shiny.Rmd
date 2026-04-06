@@ -347,6 +347,72 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 
+## Chart Dependency
+
+`muiChartsDependency()` returns the HTML dependency for the MUI X Charts JavaScript library. Use it to manually add the dependency when embedding charts in custom HTML:
+
+```r
+library(htmltools)
+
+browsable(tagList(
+  muiChartsDependency(),
+  tags$div(id = "my-custom-chart")
+))
+```
+
+## reactOutput and renderReact
+
+`reactOutput()` and `renderReact()` are alternatives to `uiOutput()` / `renderUI()` from the [shiny.react](https://appsilon.github.io/shiny.react/) package, re-exported here for convenience. They provide more direct React rendering control:
+
+```r
+library(muiCharts)
+library(shiny)
+library(dplyr)
+library(tidyr)
+
+starwars_gender <- starwars |>
+  unnest_longer(films) |>
+  count(films, sex) |>
+  filter(!is.na(sex)) |>
+  pivot_wider(names_from = sex, values_from = n, values_fill = 0) |>
+  arrange(female)
+
+ui <- tagList(
+  reactOutput("chart")
+)
+
+server <- function(input, output, session) {
+  output$chart <- renderReact({
+    BarChart(
+      dataset = starwars_gender,
+      xAxis = list(list(scaleType = "band", dataKey = "films")),
+      series = list(list(dataKey = "male", label = "Male")),
+      height = 300
+    )
+  })
+}
+
+shinyApp(ui, server)
+```
+
+## setInput and triggerEvent
+
+`setInput()` programmatically sets a Shiny input value from the server. `triggerEvent()` fires a named event to connected JavaScript handlers. Both are re-exported from [shiny.react](https://appsilon.github.io/shiny.react/):
+
+```r
+server <- function(input, output, session) {
+  # Reset a Shiny input value programmatically
+  observeEvent(input$reset, {
+    setInput(session, inputId = "selectedIndex", value = 0L)
+  })
+
+  # Trigger a custom event for JavaScript-side chart interactions
+  observeEvent(input$highlight, {
+    triggerEvent(session, "chart:highlight", data = list(index = 0L))
+  })
+}
+```
+
 ## Learn More
 
 - [Shiny documentation](https://shiny.posit.co/)

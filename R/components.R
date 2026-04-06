@@ -70,6 +70,14 @@ ChartsAxisTooltipContent <- component('ChartsAxisTooltipContent')
 #' @export
 ChartsClipPath <- component('ChartsClipPath')
 
+#' @rdname ChartsContainer
+#' @export
+ChartsContainer <- component('ChartsContainer')
+
+#' @rdname ChartsDataProvider
+#' @export
+ChartsDataProvider <- component('ChartsDataProvider')
+
 #' @rdname ChartsGrid
 #' @export
 ChartsGrid <- component('ChartsGrid')
@@ -248,4 +256,56 @@ ScatterPlot <- component('ScatterPlot')
 #' @rdname SparkLineChart
 #' @export
 SparkLineChart <- component('SparkLineChart')
+
+#' @rdname ChartsAxisHighlightPath
+#' @export
+ChartsAxisHighlightPath <- component('ChartsAxisHighlightPath')
+
+#' @rdname ChartsLabel
+#' @export
+ChartsLabel <- component('ChartsLabel')
+
+#' @rdname ChartsLabelMark
+#' @export
+ChartsLabelMark <- component('ChartsLabelMark')
+
+#' @rdname ChartsTooltipCell
+#' @export
+ChartsTooltipCell <- component('ChartsTooltipCell')
+
+#' @rdname ChartsTooltipPaper
+#' @export
+ChartsTooltipPaper <- component('ChartsTooltipPaper')
+
+#' @rdname ChartsTooltipRow
+#' @export
+ChartsTooltipRow <- component('ChartsTooltipRow')
+
+#' @rdname ChartsTooltipTable
+#' @export
+ChartsTooltipTable <- component('ChartsTooltipTable')
+
+#' @rdname FocusedBar
+#' @export
+FocusedBar <- component('FocusedBar')
+
+#' @rdname FocusedLineMark
+#' @export
+FocusedLineMark <- component('FocusedLineMark')
+
+#' @rdname FocusedRadarMark
+#' @export
+FocusedRadarMark <- component('FocusedRadarMark')
+
+#' @rdname FocusedScatterMark
+#' @export
+FocusedScatterMark <- component('FocusedScatterMark')
+
+#' @rdname RadarDataProvider
+#' @export
+RadarDataProvider <- component('RadarDataProvider')
+
+#' @rdname ScatterMarker
+#' @export
+ScatterMarker <- component('ScatterMarker')
 

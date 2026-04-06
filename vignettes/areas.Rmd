@@ -307,6 +307,42 @@ LineChart(
 )
 ```
 
+## Area Sub-components
+
+`AreaElement` and `AnimatedArea` are the sub-components rendered by `AreaPlot` for each filled area and its animation. Call them to explore their props:
+
+```{r eval=FALSE}
+AreaElement(skipAnimation = TRUE)
+AnimatedArea(skipAnimation = TRUE)
+```
+
+Use `slotProps` on `AreaPlot` to configure these components:
+
+```{r}
+ChartDataProvider(
+  dataset = starwars_gender,
+  height = 300,
+  xAxis = list(
+    list(
+      scaleType = "point",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "line", dataKey = "male", label = "Male", area = TRUE),
+    list(type = "line", dataKey = "female", label = "Female", area = TRUE)
+  ),
+  ChartsTooltip(),
+  ChartsSurface(
+    AreaPlot(slotProps = list(area = list(skipAnimation = TRUE))),
+    LinePlot(),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
 ## Learn More
 
 - [MUI Area Charts Documentation](https://mui.com/x/react-charts/areas-demo/)

@@ -281,6 +281,43 @@ LineChart(
 )
 ```
 
+## Line and Mark Sub-components
+
+`LineElement`, `MarkElement`, and `AnimatedLine` are the sub-components rendered by `LinePlot` and `MarkPlot` for each line, mark, and animated line respectively. Call them to explore their props:
+
+```{r eval=FALSE}
+LineElement(skipAnimation = TRUE)
+MarkElement(shape = "circle")
+AnimatedLine(skipAnimation = TRUE)
+```
+
+Use `slotProps` to pass props to these components in a composition chart:
+
+```{r}
+ChartDataProvider(
+  dataset = starwars_gender,
+  height = 300,
+  xAxis = list(
+    list(
+      scaleType = "point",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "line", dataKey = "male", label = "Male"),
+    list(type = "line", dataKey = "female", label = "Female")
+  ),
+  ChartsTooltip(),
+  ChartsSurface(
+    LinePlot(slotProps = list(line = list(skipAnimation = TRUE))),
+    MarkPlot(slotProps = list(mark = list(shape = "circle"))),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
 ## Learn More
 
 - [MUI Line Charts Documentation](https://mui.com/x/react-charts/lines/)

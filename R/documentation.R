@@ -1309,3 +1309,168 @@ NULL
 #' @name RadarMetricLabels
 NULL
 
+#' ChartsContainer
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-container/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsContainer
+NULL
+
+#' ChartsDataProvider
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-data-provider/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsDataProvider
+NULL
+
+#' ChartsAxisHighlightPath
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-axis-highlight-path/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsAxisHighlightPath
+NULL
+
+#' ChartsLabel
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-label/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsLabel
+NULL
+
+#' ChartsLabelMark
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-label-mark/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsLabelMark
+NULL
+
+#' ChartsTooltipCell
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-tooltip-cell/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsTooltipCell
+NULL
+
+#' ChartsTooltipPaper
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-tooltip-paper/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsTooltipPaper
+NULL
+
+#' ChartsTooltipRow
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-tooltip-row/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsTooltipRow
+NULL
+
+#' ChartsTooltipTable
+#'
+#' @description \url{https://mui.com/x/api/charts/charts-tooltip-table/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ChartsTooltipTable
+NULL
+
+#' FocusedBar
+#'
+#' @description \url{https://mui.com/x/api/charts/focused-bar/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name FocusedBar
+NULL
+
+#' FocusedLineMark
+#'
+#' @description \url{https://mui.com/x/api/charts/focused-line-mark/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name FocusedLineMark
+NULL
+
+#' FocusedRadarMark
+#'
+#' @description \url{https://mui.com/x/api/charts/focused-radar-mark/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name FocusedRadarMark
+NULL
+
+#' FocusedScatterMark
+#'
+#' @description \url{https://mui.com/x/api/charts/focused-scatter-mark/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name FocusedScatterMark
+NULL
+
+#' RadarDataProvider
+#'
+#' @description \url{https://mui.com/x/api/charts/radar-data-provider/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name RadarDataProvider
+NULL
+
+#' ScatterMarker
+#'
+#' @description \url{https://mui.com/x/api/charts/scatter-marker/}
+#'
+#' @param ... Props to pass to the component.
+#' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
+#'
+#' @md
+#' @name ScatterMarker
+NULL
+

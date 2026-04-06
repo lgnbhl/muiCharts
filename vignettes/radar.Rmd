@@ -226,6 +226,132 @@ RadarChart(
 )
 ```
 
+## Radar Composition
+
+`RadarDataProvider` is the dedicated data provider for radar charts. Use it with `RadarGrid`, `RadarAxis`, `RadarSeriesPlot`, and `RadarMetricLabels` to build a fully custom radar chart:
+
+```{r}
+RadarDataProvider(
+  height = 350,
+  series = list(
+    list(
+      label = "A New Hope",
+      data = c(film1$male, film1$female, film1$hermaphroditic, film1$none)
+    ),
+    list(
+      label = "Attack of the Clones",
+      data = c(film2$male, film2$female, film2$hermaphroditic, film2$none)
+    )
+  ),
+  radar = list(
+    metrics = c("male", "female", "hermaphroditic", "none")
+  ),
+  ChartsLegend(),
+  ChartsTooltip(),
+  ChartsSurface(
+    RadarGrid(),
+    RadarSeriesPlot(),
+    RadarAxis(),
+    RadarMetricLabels()
+  )
+)
+```
+
+## Focused Radar Mark
+
+`FocusedRadarMark` renders the visual indicator when a radar data point receives keyboard focus. Add it inside `ChartsSurface`:
+
+```{r}
+RadarDataProvider(
+  height = 350,
+  series = list(
+    list(
+      label = "A New Hope",
+      data = c(film1$male, film1$female, film1$hermaphroditic, film1$none)
+    ),
+    list(
+      label = "Attack of the Clones",
+      data = c(film2$male, film2$female, film2$hermaphroditic, film2$none)
+    )
+  ),
+  radar = list(
+    metrics = c("male", "female", "hermaphroditic", "none")
+  ),
+  ChartsTooltip(),
+  ChartsSurface(
+    RadarGrid(),
+    RadarSeriesPlot(),
+    RadarSeriesMarks(),
+    FocusedRadarMark(),
+    RadarAxis(),
+    RadarMetricLabels()
+  )
+)
+```
+
+## Radar Axis Highlight
+
+`RadarAxisHighlight` renders the highlight indicator when hovering over a radar axis. Add it inside `ChartsSurface` in the composition API:
+
+```{r}
+RadarDataProvider(
+  height = 350,
+  series = list(
+    list(
+      label = "A New Hope",
+      data = c(film1$male, film1$female, film1$hermaphroditic, film1$none)
+    ),
+    list(
+      label = "Attack of the Clones",
+      data = c(film2$male, film2$female, film2$hermaphroditic, film2$none)
+    )
+  ),
+  radar = list(
+    metrics = c("male", "female", "hermaphroditic", "none")
+  ),
+  ChartsTooltip(),
+  ChartsSurface(
+    RadarGrid(),
+    RadarSeriesPlot(),
+    RadarAxisHighlight(),
+    RadarAxis(),
+    RadarMetricLabels()
+  )
+)
+```
+
+## Radar Series Area
+
+`RadarSeriesArea` renders the filled area for each radar series. Use it alongside `RadarSeriesPlot` for filled-area radar charts:
+
+```{r}
+RadarDataProvider(
+  height = 350,
+  series = list(
+    list(
+      label = "A New Hope",
+      data = c(film1$male, film1$female, film1$hermaphroditic, film1$none)
+    ),
+    list(
+      label = "Attack of the Clones",
+      data = c(film2$male, film2$female, film2$hermaphroditic, film2$none)
+    )
+  ),
+  radar = list(
+    metrics = c("male", "female", "hermaphroditic", "none")
+  ),
+  ChartsLegend(),
+  ChartsTooltip(),
+  ChartsSurface(
+    RadarGrid(),
+    RadarSeriesArea(),
+    RadarSeriesPlot(),
+    RadarAxis(),
+    RadarMetricLabels()
+  )
+)
+```
+
 ## Learn More
 
 - [MUI Radar Chart Documentation](https://mui.com/x/react-charts/radar/)

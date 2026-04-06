@@ -200,6 +200,44 @@ ChartDataProvider(
 )
 ```
 
+## Label Marks
+
+`ChartsLabelMark` renders the colored shape used to identify a series — the small icon that appears next to a series name. Use it inside custom legend layouts or annotations:
+
+```{r}
+library(muiMaterial)
+
+ChartDataProvider(
+  dataset = starwars_gender,
+  height = 300,
+  xAxis = list(
+    list(scaleType = "band", dataKey = "films", tickLabelStyle = list(fontSize = "0.5em"))
+  ),
+  series = list(
+    list(type = "bar", dataKey = "male", label = "Male"),
+    list(type = "bar", dataKey = "female", label = "Female")
+  ),
+  Box(
+    sx = list(display = "flex", gap = "16px", padding = "8px"),
+    Box(
+      sx = list(display = "flex", alignItems = "center", gap = "4px"),
+      ChartsLabelMark(type = "square", color = "#19d23e"),
+      Typography(variant = "body2", "Male")
+    ),
+    Box(
+      sx = list(display = "flex", alignItems = "center", gap = "4px"),
+      ChartsLabelMark(type = "square", color = "#9c27b0"),
+      Typography(variant = "body2", "Female")
+    )
+  ),
+  ChartsSurface(
+    BarPlot(),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
 ## Learn More
 
 For more details about legend customization, visit the [MUI X Legend documentation](https://mui.com/x/react-charts/legend/).

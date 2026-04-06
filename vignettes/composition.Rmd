@@ -280,6 +280,153 @@ GaugeContainer(
 )
 ```
 
+## ChartsContainer and ChartsDataProvider
+
+`ChartsContainer` and `ChartsDataProvider` are the v8 equivalents of `ChartContainer` and `ChartDataProvider`. `ChartsDataProvider` provides data context without rendering SVG — pair it with `ChartsWrapper` for the HTML layer and `ChartsSurface` for the SVG:
+
+```{r}
+ChartsDataProvider(
+  dataset = starwars_gender,
+  height = 300,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "bar", dataKey = "male", label = "Male"),
+    list(type = "bar", dataKey = "female", label = "Female")
+  ),
+  ChartsWrapper(
+    ChartsLegend(),
+    ChartsTooltip(),
+    ChartsSurface(
+      ChartsGrid(horizontal = TRUE),
+      BarPlot(),
+      ChartsXAxis(),
+      ChartsYAxis()
+    )
+  )
+)
+```
+
+`ChartsContainer` combines `ChartsDataProvider` and `ChartsSurface` into a single SVG-based container. Use it when you only need SVG content without an outer HTML wrapper:
+
+```{r}
+ChartsContainer(
+  dataset = starwars_gender,
+  height = 300,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "bar", dataKey = "male", label = "Male"),
+    list(type = "bar", dataKey = "female", label = "Female")
+  ),
+  ChartsGrid(horizontal = TRUE),
+  BarPlot(),
+  ChartsAxisHighlight(x = "band"),
+  ChartsXAxis(),
+  ChartsYAxis()
+)
+```
+
+## Inline Labels
+
+`ChartsLabel` renders a styled HTML `<span>` element. Place it as a sibling of `ChartsSurface` (outside the SVG) inside `ChartDataProvider`, and pass the text as a child argument:
+
+```{r}
+ChartDataProvider(
+  dataset = starwars_gender,
+  height = 320,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "bar", dataKey = "male", label = "Male")
+  ),
+  ChartsLabel(
+    "Star Wars Characters",
+    style = list(fontSize = "0.85rem", fontWeight = "bold")
+  ),
+  ChartsSurface(
+    BarPlot(),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
+## Charts Text
+
+`ChartsText` renders an SVG text element inside `ChartsSurface`. Use it to add text annotations directly to the chart:
+
+```{r}
+ChartDataProvider(
+  dataset = starwars_gender,
+  height = 320,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "bar", dataKey = "male", label = "Male")
+  ),
+  ChartsSurface(
+    BarPlot(),
+    ChartsText(
+      text = "Male characters per film",
+      x = 5,
+      y = 15,
+      style = list(fontSize = "0.75rem", fill = "#555")
+    ),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
+## Clip Path
+
+`ChartsClipPath` adds an SVG `<clipPath>` definition inside `ChartsSurface` to restrict plot rendering to the drawing area:
+
+```{r}
+ChartDataProvider(
+  dataset = starwars_gender,
+  height = 300,
+  xAxis = list(
+    list(
+      scaleType = "band",
+      dataKey = "films",
+      tickLabelStyle = list(fontSize = "0.5em")
+    )
+  ),
+  series = list(
+    list(type = "bar", dataKey = "male", label = "Male"),
+    list(type = "bar", dataKey = "female", label = "Female")
+  ),
+  ChartsSurface(
+    ChartsClipPath(id = "drawing-area-clip"),
+    BarPlot(),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
 ## Learn More
 
 For more details about composition, visit the [MUI X Composition documentation](https://mui.com/x/react-charts/composition/).

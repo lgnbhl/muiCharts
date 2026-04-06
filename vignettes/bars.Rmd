@@ -272,6 +272,36 @@ BarChart(
 )
 ```
 
+## Bar Element and Bar Label
+
+`BarElement` and `BarLabel` are the sub-components that `BarPlot` uses internally to render each bar and its label. Call them directly to explore their props:
+
+```{r eval=FALSE}
+BarElement(skipAnimation = TRUE)
+BarLabel(placement = "outside")
+```
+
+Use `slotProps` in `BarPlot` to pass props to these components without a custom slot override:
+
+```{r}
+ChartDataProvider(
+  dataset = starwars_top5,
+  height = 320,
+  xAxis = list(list(scaleType = "band", dataKey = "species", label = "Species")),
+  series = list(list(type = "bar", dataKey = "n", label = "Count")),
+  ChartsSurface(
+    BarPlot(
+      barLabel = "value",
+      slotProps = list(
+        barLabel = list(placement = "outside")
+      )
+    ),
+    ChartsXAxis(),
+    ChartsYAxis()
+  )
+)
+```
+
 ## Learn More
 
 - [MUI Bar Charts Documentation](https://mui.com/x/react-charts/bars/)
