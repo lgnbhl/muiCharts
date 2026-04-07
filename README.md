@@ -16,16 +16,12 @@ status](https://www.r-pkg.org/badges/version/muiCharts)](https://CRAN.R-project.
 **muiCharts** gives access to *MUI X Charts* React chart components for
 data visualization from R.
 
-## Install and load
+## Install
 
 You can install the development version of **muiCharts** like so:
 
 ``` r
 remotes::install_github("lgnbhl/muiCharts")
-```
-
-``` r
-library(muiCharts)
 ```
 
 **Read the full documentation with examples
@@ -34,6 +30,7 @@ library(muiCharts)
 ## Basic example
 
 ``` r
+library(muiCharts)
 library(dplyr)
 
 starwars_summary <- starwars |>

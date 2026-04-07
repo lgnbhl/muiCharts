@@ -22,7 +22,7 @@ dependencies <- jsonlite::fromJSON("js/package.json")$dependencies
 
 **muiCharts** gives access to *MUI X Charts* React chart components for data visualization from R.
 
-## Install and load
+## Install
 
 You can install the development version of **muiCharts** like so:
 
@@ -30,15 +30,12 @@ You can install the development version of **muiCharts** like so:
 remotes::install_github("lgnbhl/muiCharts")
 ```
 
-```{r}
-library(muiCharts)
-```
-
 **Read the full documentation with examples [here](https://lgnbhl.github.io/muiCharts).**
 
 ## Basic example
 
 ```r
+library(muiCharts)
 library(dplyr)
 
 starwars_summary <- starwars |>

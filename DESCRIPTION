@@ -14,9 +14,9 @@ LazyData: true
 RoxygenNote: 7.3.3
 Depends: R (>= 3.4)
 Imports:
+    muiMaterial,
     htmltools,
-    shiny.react,
-    muiMaterial
+    shiny.react
 Suggests: 
     dplyr,
     tidyr,
