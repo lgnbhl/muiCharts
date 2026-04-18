@@ -29,6 +29,7 @@ remotes::install_github("lgnbhl/muiCharts")
 
 ```{r message=FALSE, warning=FALSE}
 library(muiCharts)
+library(dplyr)
 ```
 
 ```{r}
