@@ -3,7 +3,7 @@ Type: Package
 Title: 'MUI X Charts' for 'shiny' Apps and 'Quarto'
 Version: 0.1.0
 Authors@R: 
-    c(person(given = "Félix", family = "Luginbuhl", role = c("aut", "cre"), email = "felix.luginbuhl@protonmail.ch"))
+    c(person(given = "Felix", family = "Luginbuhl", role = c("aut", "cre"), email = "felix.luginbuhl@protonmail.ch"))
 Maintainer: Felix Luginbuhl <felix.luginbuhl@protonmail.ch>
 Description:
   'MUI X Charts' React chart components for data visualization for building 
@@ -12,7 +12,8 @@ License: LGPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.3
-Depends: R (>= 3.4)
+Depends: 
+    R (>= 3.5)
 Imports:
     muiMaterial,
     htmltools,
