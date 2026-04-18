@@ -17,7 +17,6 @@
 #'   \item{species}{\code{list} of \code{character} vectors. A list of species names appearing in the film.}
 #' }
 #' @source \url{https://swapi.info/api/films}
-#' @export
 "starwars_films"
 
 #' Star Wars People
@@ -41,7 +40,6 @@
 #'   \item{vehicles}{\code{list} of \code{character} vectors. A list of vehicle names this character has piloted.}
 #' }
 #' @source \url{https://swapi.info/api/people}
-#' @export
 "starwars_people"
 
 #' Star Wars Planets
@@ -68,7 +66,6 @@
 #'   \item{films}{\code{list} of \code{character} vectors. A list of film titles in which this planet appears.}
 #' }
 #' @source \url{https://swapi.info/api/planets}
-#' @export
 "starwars_planets"
 
 #' Star Wars Starships
@@ -98,7 +95,6 @@
 #'   \item{films}{\code{list} of \code{character} vectors. A list of film titles in which this starship appears.}
 #' }
 #' @source \url{https://swapi.info/api/starships}
-#' @export
 "starwars_starships"
 
 #' Star Wars Species
@@ -125,5 +121,4 @@
 #'   \item{films}{\code{list} of \code{character} vectors. A list of film titles in which this species appears.}
 #' }
 #' @source \url{https://swapi.info/api/species}
-#' @export
 "starwars_species"
