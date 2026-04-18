@@ -36,21 +36,14 @@ remotes::install_github("lgnbhl/muiCharts")
 
 ```r
 library(muiCharts)
-library(dplyr)
-
-starwars_summary <- starwars |>
-  filter(species %in% c("Human", "Droid", "Wookiee")) |>
-  group_by(species) |>
-  summarise(height = mean(height, na.rm = TRUE), mass = mean(mass, na.rm = TRUE))
 
 BarChart(
-  dataset = starwars_summary,
+  dataset = head(starwars_people, 4),
   xAxis = list(
-    list(scaleType = "band", dataKey = "species")
+    list(scaleType = "band", dataKey = "name")
   ),
   series = list(
-    list(dataKey = "height", label = "Height"),
-    list(dataKey = "mass", label = "Mass")
+    list(dataKey = "height", label = "Height")
   ),
   height = 300
 )

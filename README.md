@@ -8,8 +8,8 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/muiCharts)](https://CRAN.R-project.org/package=muiCharts)
 [![R-CMD-check](https://github.com/lgnbhl/muiCharts/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lgnbhl/muiCharts/actions/workflows/R-CMD-check.yaml)
-[![](https://img.shields.io/badge/react-18.3.1-blue.svg)](https://mui.com/x/react-charts/)
-[![](https://img.shields.io/badge/react--dom-18.3.1-blue.svg)](https://mui.com/x/react-charts/)
+[![](https://img.shields.io/badge/NA-NULL-blue.svg)](https://mui.com/x/react-charts/)
+[![](https://img.shields.io/badge/NA-NULL-blue.svg)](https://mui.com/x/react-charts/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow-E4405F?style=social&logo=linkedin)](https://www.linkedin.com/in/FelixLuginbuhl)
 <!-- badges: end -->
 
@@ -31,21 +31,14 @@ remotes::install_github("lgnbhl/muiCharts")
 
 ``` r
 library(muiCharts)
-library(dplyr)
-
-starwars_summary <- starwars |>
-  filter(species %in% c("Human", "Droid", "Wookiee")) |>
-  group_by(species) |>
-  summarise(height = mean(height, na.rm = TRUE), mass = mean(mass, na.rm = TRUE))
 
 BarChart(
-  dataset = starwars_summary,
+  dataset = head(starwars_people, 4),
   xAxis = list(
-    list(scaleType = "band", dataKey = "species")
+    list(scaleType = "band", dataKey = "name")
   ),
   series = list(
-    list(dataKey = "height", label = "Height"),
-    list(dataKey = "mass", label = "Mass")
+    list(dataKey = "height", label = "Height")
   ),
   height = 300
 )

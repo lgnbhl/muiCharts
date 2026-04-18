@@ -106,7 +106,6 @@ ChartsSurface <- component('ChartsSurface')
 #' @export
 ChartsText <- component('ChartsText')
 
-
 #' @rdname ChartsTooltip
 #' @export
 ChartsTooltip <- component('ChartsTooltip')
@@ -127,11 +126,9 @@ ChartsXAxis <- component('ChartsXAxis')
 #' @export
 ChartsYAxis <- component('ChartsYAxis')
 
-
 #' @rdname ContinuousColorLegend
 #' @export
 ContinuousColorLegend <- component('ContinuousColorLegend')
-
 
 #' @rdname Gauge
 #' @export
@@ -308,4 +305,3 @@ RadarDataProvider <- component('RadarDataProvider')
 #' @rdname ScatterMarker
 #' @export
 ScatterMarker <- component('ScatterMarker')
-
