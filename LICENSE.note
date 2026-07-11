@@ -1,0 +1,58 @@
+The muiCharts R package is released under the MIT License
+(see the LICENSE file).
+
+The package bundles a pre-built JavaScript file
+('inst/www/muiCharts/mui-x-charts.js') that includes minified
+third-party code. License headers preserved by the bundler are in:
+
+    inst/www/muiCharts/mui-x-charts.js.LICENSE.txt
+
+Bundled third-party libraries
+-----------------------------
+
+  Library                  License  Copyright holder
+  -----------------------  -------  -----------------------------------------
+  @mui/x-charts            MIT      Copyright (c) MUI
+  @mui/x-charts-vendor     MIT/ISC  Copyright (c) MUI (vendored D3 modules)
+  @mui/x-internals         MIT      Copyright (c) MUI
+  @mui/x-internal-gestures MIT      Copyright (c) MUI
+  @mui/system (subpaths)   MIT      Copyright (c) MUI
+  D3 modules (d3-array,
+    d3-color, d3-format,
+    d3-interpolate,
+    d3-path, d3-scale,
+    d3-shape, d3-time,
+    d3-time-format,
+    d3-timer), internmap   ISC      Copyright 2010-2023 Mike Bostock
+  flatqueue                ISC      Copyright (c) 2018 Vladimir Agafonkin
+  react-is, prop-types,
+    use-sync-external-
+    store                  MIT      Copyright (c) Meta Platforms, Inc.
+                                    and affiliates
+  @babel/runtime           MIT      Copyright (c) 2014-present Sebastian
+                                    McKenzie and other contributors
+  bezier-easing            MIT      Copyright (c) 2014 Gaetan Renaudeau
+  clsx                     MIT      Copyright (c) Luke Edwards
+  reselect                 MIT      Copyright (c) 2015-2018 Reselect
+                                    Contributors
+
+The 'react', 'react-dom', '@mui/material', '@mui/utils',
+'@mui/private-theming', '@mui/styled-engine', '@emotion/react',
+'@emotion/styled' and '@emotion/cache' libraries are declared as
+external dependencies of the bundled JavaScript and are provided at
+runtime by 'shiny.react' and 'muiMaterial'; they are not themselves
+redistributed inside this package. Deep subpath imports of
+'@mui/system' (e.g. ThemeProvider, createStyled) are bundled as
+transitive dependencies of '@mui/x-charts'.
+
+Trademark notice
+----------------
+
+"MUI", "Material UI" and "MUI X" are trademarks of MUI Inc.
+The muiCharts R package is an independent, community-maintained
+wrapper and is not affiliated with, sponsored by, or endorsed by
+MUI Inc. Use of the "MUI" and "MUI X" names is solely to identify
+the third-party JavaScript library that this package wraps. The
+package bundles only the MIT-licensed community 'MUI X Charts'
+('@mui/x-charts'); the commercial 'Pro' tier is not included.
+See https://mui.com/legal/ for MUI's published legal information.
