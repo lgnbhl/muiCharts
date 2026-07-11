@@ -108,32 +108,6 @@ test_that("BarPlot() returns shiny.tag, correct name and value", {
     "Test"
   )
 })
-test_that("ChartContainer() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartContainer()), c("muiCharts", "shiny.tag"))
-  expect_equal(
-    environment(ChartContainer()[["children"]][[2]])[["data"]][["name"]],
-    "ChartContainer"
-  )
-  expect_equal(
-    environment(ChartContainer("Test")[["children"]][[2]])[["data"]][[
-      "props"
-    ]][["value"]][["children"]],
-    "Test"
-  )
-})
-test_that("ChartDataProvider() returns shiny.tag, correct name and value", {
-  expect_equal(class(ChartDataProvider()), c("muiCharts", "shiny.tag"))
-  expect_equal(
-    environment(ChartDataProvider()[["children"]][[2]])[["data"]][["name"]],
-    "ChartDataProvider"
-  )
-  expect_equal(
-    environment(ChartDataProvider("Test")[["children"]][[2]])[["data"]][[
-      "props"
-    ]][["value"]][["children"]],
-    "Test"
-  )
-})
 test_that("ChartsAxis() returns shiny.tag, correct name and value", {
   expect_equal(class(ChartsAxis()), c("muiCharts", "shiny.tag"))
   expect_equal(
@@ -958,6 +932,84 @@ test_that("ScatterMarker() returns shiny.tag, correct name and value", {
     environment(ScatterMarker("Test")[["children"]][[2]])[["data"]][["props"]][[
       "value"
     ]][["children"]],
+    "Test"
+  )
+})
+test_that("ChartsBrushOverlay() returns shiny.tag, correct name and value", {
+  expect_equal(class(ChartsBrushOverlay()), c("muiCharts", "shiny.tag"))
+  expect_equal(
+    environment(ChartsBrushOverlay()[["children"]][[2]])[["data"]][["name"]],
+    "ChartsBrushOverlay"
+  )
+  expect_equal(
+    environment(ChartsBrushOverlay("Test")[["children"]][[2]])[["data"]][[
+      "props"
+    ]][["value"]][["children"]],
+    "Test"
+  )
+})
+test_that("ChartsLayerContainer() returns shiny.tag, correct name and value", {
+  expect_equal(class(ChartsLayerContainer()), c("muiCharts", "shiny.tag"))
+  expect_equal(
+    environment(ChartsLayerContainer()[["children"]][[2]])[["data"]][["name"]],
+    "ChartsLayerContainer"
+  )
+  expect_equal(
+    environment(ChartsLayerContainer("Test")[["children"]][[2]])[["data"]][[
+      "props"
+    ]][["value"]][["children"]],
+    "Test"
+  )
+})
+test_that("ChartsSvgLayer() returns shiny.tag, correct name and value", {
+  expect_equal(class(ChartsSvgLayer()), c("muiCharts", "shiny.tag"))
+  expect_equal(
+    environment(ChartsSvgLayer()[["children"]][[2]])[["data"]][["name"]],
+    "ChartsSvgLayer"
+  )
+  expect_equal(
+    environment(ChartsSvgLayer("Test")[["children"]][[2]])[["data"]][[
+      "props"
+    ]][["value"]][["children"]],
+    "Test"
+  )
+})
+test_that("FocusedPieArc() returns shiny.tag, correct name and value", {
+  expect_equal(class(FocusedPieArc()), c("muiCharts", "shiny.tag"))
+  expect_equal(
+    environment(FocusedPieArc()[["children"]][[2]])[["data"]][["name"]],
+    "FocusedPieArc"
+  )
+  expect_equal(
+    environment(FocusedPieArc("Test")[["children"]][[2]])[["data"]][["props"]][[
+      "value"
+    ]][["children"]],
+    "Test"
+  )
+})
+test_that("ChartsToolbar() wraps the JS Toolbar component", {
+  expect_equal(class(ChartsToolbar()), c("muiCharts", "shiny.tag"))
+  expect_equal(
+    environment(ChartsToolbar()[["children"]][[2]])[["data"]][["name"]],
+    "Toolbar"
+  )
+  expect_equal(
+    environment(ChartsToolbar("Test")[["children"]][[2]])[["data"]][["props"]][[
+      "value"
+    ]][["children"]],
+    "Test"
+  )
+})
+test_that("ChartsToolbarButton() wraps the JS ToolbarButton component", {
+  expect_equal(class(ChartsToolbarButton()), c("muiCharts", "shiny.tag"))
+  expect_equal(
+    environment(ChartsToolbarButton()[["children"]][[2]])[["data"]][["name"]],
+    "ToolbarButton"
+  )
+  expect_equal(
+    environment(
+      ChartsToolbarButton("Test")[["children"]][[2]]
+    )[["data"]][["props"]][["value"]][["children"]],
     "Test"
   )
 })

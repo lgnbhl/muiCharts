@@ -45,14 +45,6 @@ BarLabel <- component('BarLabel')
 #' @export
 BarPlot <- component('BarPlot')
 
-#' @rdname ChartContainer
-#' @export
-ChartContainer <- component('ChartContainer')
-
-#' @rdname ChartDataProvider
-#' @export
-ChartDataProvider <- component('ChartDataProvider')
-
 #' @rdname ChartsAxis
 #' @export
 ChartsAxis <- component('ChartsAxis')
@@ -305,3 +297,32 @@ RadarDataProvider <- component('RadarDataProvider')
 #' @rdname ScatterMarker
 #' @export
 ScatterMarker <- component('ScatterMarker')
+
+#' @rdname ChartsBrushOverlay
+#' @export
+ChartsBrushOverlay <- component('ChartsBrushOverlay')
+
+#' @rdname ChartsLayerContainer
+#' @export
+ChartsLayerContainer <- component('ChartsLayerContainer')
+
+#' @rdname ChartsSvgLayer
+#' @export
+ChartsSvgLayer <- component('ChartsSvgLayer')
+
+#' @rdname FocusedPieArc
+#' @export
+FocusedPieArc <- component('FocusedPieArc')
+
+# The chart toolbar is exported by '@mui/x-charts' as `Toolbar`/`ToolbarButton`,
+# but muiMaterial already exports Material UI's `Toolbar` (the AppBar one) and
+# the two packages are designed to be attached together. Prefix the R wrappers
+# with "Charts" (MUI's own convention for chart components) to avoid masking.
+
+#' @rdname ChartsToolbar
+#' @export
+ChartsToolbar <- component('Toolbar')
+
+#' @rdname ChartsToolbarButton
+#' @export
+ChartsToolbarButton <- component('ToolbarButton')
