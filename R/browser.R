@@ -8,6 +8,14 @@
 #' @param ... Additional arguments passed to print.
 #' @return Invisibly returns x.
 #'
+#' @examples
+#' chart <- BarChart(
+#'   series = list(list(data = c(1, 2, 3))),
+#'   height = 300
+#' )
+#' # browse = FALSE prints the underlying HTML instead of opening the viewer.
+#' print(chart, browse = FALSE)
+#'
 #' @export
 print.muiCharts <- function(x, browse = interactive(), ...) {
   if (browse) {

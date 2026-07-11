@@ -20,3 +20,12 @@ Invisibly returns x.
 When called interactively, renders the component in the IDE viewer panel.
 Otherwise, falls back to standard shiny.tag printing (raw HTML text).
 }
+\examples{
+chart <- BarChart(
+  series = list(list(data = c(1, 2, 3))),
+  height = 300
+)
+# browse = FALSE prints the underlying HTML instead of opening the viewer.
+print(chart, browse = FALSE)
+
+}
