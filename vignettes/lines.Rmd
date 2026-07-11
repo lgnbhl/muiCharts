@@ -166,7 +166,7 @@ LineChart(
 `LineElement`, `MarkElement`, and `AnimatedLine` are the sub-components rendered by `LinePlot` and `MarkPlot`. Use `slotProps` to configure them in a composition chart:
 
 ```{r}
-ChartDataProvider(
+ChartsDataProvider(
   dataset = starwars_films |>
     mutate(
       Characters = lengths(characters),

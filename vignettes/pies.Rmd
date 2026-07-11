@@ -210,10 +210,10 @@ PieChart(
 
 ## Pie Chart Composition
 
-Build pie charts from individual sub-components using `ChartDataProvider` and `PiePlot`:
+Build pie charts from individual sub-components using `ChartsDataProvider` and `PiePlot`:
 
 ```{r}
-ChartDataProvider(
+ChartsDataProvider(
   series = list(list(
     type        = "pie",
     data        = starwars_species |> head(4) |>

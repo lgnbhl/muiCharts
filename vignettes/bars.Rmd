@@ -193,7 +193,7 @@ BarLabel(placement = "outside")
 Use `slotProps` in `BarPlot` to pass props to these components without a custom slot override:
 
 ```{r}
-ChartDataProvider(
+ChartsDataProvider(
   dataset = starwars_species |>
     filter(!is.na(average_height)) |>
     head(4) |>
