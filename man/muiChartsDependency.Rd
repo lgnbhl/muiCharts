@@ -7,8 +7,18 @@
 muiChartsDependency()
 }
 \value{
-HTML dependency object.
+A list of HTML dependency objects (\code{htmltools::htmlDependency})
+  that load the bundled MUI X Charts JavaScript and its shared MUI Material
+  runtime. The muiMaterial dependency is listed first so its bundle (which
+  provides react, react-dom, \code{@mui/material}, \code{@mui/system} and the
+  emotion runtime that the charts consume as externals) loads before the
+  chart script. Attach it to custom HTML when building a chart by hand.
 }
 \description{
 Mui Charts UI JS dependency
+}
+\examples{
+# Inspect the dependencies attached to every muiCharts element.
+muiChartsDependency()
+
 }
