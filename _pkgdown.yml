@@ -52,6 +52,8 @@ navbar:
       href: articles/composition.html
   - text: Custom
     menu:
+    - text: Custom Components
+      href: articles/custom-components.html
     - text: Shiny
       href: articles/shiny.html
     - text: Quarto
