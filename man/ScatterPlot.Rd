@@ -17,8 +17,8 @@ Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
 }
 \details{
 \itemize{
-\item onItemClick \code{func} \cr Default is - Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event recorded on the \if{html}{\out{<svg/>}} element.scatterItemIdentifier The scatter item identifier.
-\item renderer \verb{'svg-batch', 'svg-single'} \cr Default is 'svg-single' The type of renderer to use for the scatter plot. - svg-single: Renders every scatter item in a \if{html}{\out{<circle />}} element. - svg-batch: Batch renders scatter items in \if{html}{\out{<path />}} elements for better performance with large datasets, at the cost of some limitations.                Read more: https://mui.com/x/react-charts/scatter/#performance
+\item onItemClick \code{func} \cr Default is - Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event recorded on the <svg/> element.scatterItemIdentifier The scatter item identifier.
+\item renderer \verb{'svg-batch', 'svg-single'} \cr Default is 'svg-single' The type of renderer to use for the scatter plot. - svg-single: Renders every scatter item in a <circle /> element. - svg-batch: Batch renders scatter items in <path /> elements for better performance with large datasets, at the cost of some limitations.                Read more: https://mui.com/x/react-charts/scatter/#performance
 \item slotProps \code{object} \cr Default is  The props used for each component slot.
 \item slots \code{object} \cr Default is  Overridable component slots.See Slots API below for more details.
 }

@@ -18,6 +18,6 @@ Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
 \details{
 \itemize{
 \item colorGetter \code{func} \cr Default is NA Function to get the color of a scatter item given its data index. The data index argument is optional. If not provided, the color for the entire series is returned. If provided, the color for the specific scatter item is returned.
-\item onItemClick \code{func} \cr Default is NA Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event recorded on the \if{html}{\out{<svg/>}} element.scatterItemIdentifier The scatter item identifier.
+\item onItemClick \code{func} \cr Default is NA Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event recorded on the <svg/> element.scatterItemIdentifier The scatter item identifier.
 }
 }

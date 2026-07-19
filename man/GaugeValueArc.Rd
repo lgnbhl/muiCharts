@@ -13,7 +13,8 @@ GaugeValueArc(...)
 Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
 }
 \description{
-\url{https://mui.com/x/api/charts/gauge-value-arc/}
+Low-level composition component of MUI X Charts. See
+\url{https://mui.com/x/react-charts/composition/}.
 }
 \details{
 \itemize{

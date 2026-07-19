@@ -59,7 +59,7 @@ NULL
 #'
 #' @details
 #' \itemize{
-#'  \item onItemClick `func` \cr Default is - Callback fired when a line area item is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, lineItemIdentifier: LineItemIdentifier) => voidevent The event source of the callback.lineItemIdentifier The line item identifier.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a line area item is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, lineItemIdentifier: LineItemIdentifier) =&gt; voidevent The event source of the callback.lineItemIdentifier The line item identifier.
 #'  \item skipAnimation `bool` \cr Default is FALSE If true, animations are skipped.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
@@ -95,10 +95,10 @@ NULL
 #'  \item loading `bool` \cr Default is FALSE If true, a loading overlay is displayed.
 #'  \item localeText `object` \cr Default is - Localized text for chart components.
 #'  \item margin `number,  bottom?: number, left?: number, right?: number, top?: number ` \cr Default is - The margin between the SVG and the drawing area. It's used for leaving some space for extra information such as the x- and y-axis or legend.Accepts a number to be used on all sides or an object with the optional properties: top, bottom, left, and right.
-#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) => voidevent The mouse event recorded on the <svg/> element.data The data about the clicked axis and items associated with it.
-#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) => voidhighlightedItem The newly highlighted item.
-#'  \item onHighlightedAxisChange `func` \cr Default is - The function called when the pointer position corresponds to a new axis data item. This update can either be caused by a pointer movement, or an axis update. In case of multiple axes, the function is called if at least one axis is updated. The argument contains the identifier for all axes with a data property.Signature:function(axisItems: Array<AxisItemIdentifier>) => voidaxisItems The array of axes item identifiers.
-#'  \item onItemClick `func` \cr Default is - Callback fired when a bar item is clicked.Signature:function(event: React.MouseEvent<SVGElement, MouseEvent>, barItemIdentifier: BarItemIdentifier) => voidevent The event source of the callback.barItemIdentifier The bar item identifier.
+#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) =&gt; voidevent The mouse event recorded on the &lt;svg/&gt; element.data The data about the clicked axis and items associated with it.
+#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) =&gt; voidhighlightedItem The newly highlighted item.
+#'  \item onHighlightedAxisChange `func` \cr Default is - The function called when the pointer position corresponds to a new axis data item. This update can either be caused by a pointer movement, or an axis update. In case of multiple axes, the function is called if at least one axis is updated. The argument contains the identifier for all axes with a data property.Signature:function(axisItems: Array&lt;AxisItemIdentifier&gt;) =&gt; voidaxisItems The array of axes item identifiers.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a bar item is clicked.Signature:function(event: React.MouseEvent&lt;SVGElement, MouseEvent&gt;, barItemIdentifier: BarItemIdentifier) =&gt; voidevent The event source of the callback.barItemIdentifier The bar item identifier.
 #'  \item showToolbar `bool` \cr Default is FALSE If true, shows the default chart toolbar.
 #'  \item skipAnimation `bool` \cr Default is - If true, animations are skipped. If unset or false, the animations respects the user's prefers-reduced-motion setting.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
@@ -163,7 +163,7 @@ NULL
 #'  \item barLabel `'value', func` \cr Default is - If provided, the function will be used to format the label of the bar. It can be set to 'value' to display the current value.
 #'  \item barLabelPlacement `'outside', 'inside'` \cr Default is - The placement of the bar label. It controls whether the label is rendered inside or outside the bar.
 #'  \item borderRadius `number` \cr Default is - Defines the border radius of the bar element.
-#'  \item onItemClick `func` \cr Default is - Callback fired when a bar item is clicked.Signature:function(event: React.MouseEvent<SVGElement, MouseEvent>, barItemIdentifier: BarItemIdentifier) => voidevent The event source of the callback.barItemIdentifier The bar item identifier.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a bar item is clicked.Signature:function(event: React.MouseEvent&lt;SVGElement, MouseEvent&gt;, barItemIdentifier: BarItemIdentifier) =&gt; voidevent The event source of the callback.barItemIdentifier The bar item identifier.
 #'  \item skipAnimation `bool` \cr Default is undefined If true, animations are skipped.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
@@ -268,7 +268,7 @@ NULL
 #' \itemize{
 #'  \item classes `object` \cr Default is - Override or extend the styles applied to the component.See CSS classes API below for more details.
 #'  \item direction `'horizontal', 'vertical'` \cr Default is - The direction of the legend layout. The default depends on the chart.
-#'  \item onItemClick `func` \cr Default is - Callback fired when a legend item is clicked.Signature:function(event: React.MouseEvent<HTMLButtonElement, MouseEvent>, legendItem: SeriesLegendItemContext, index: number) => voidevent The click event.legendItem The legend item data.index The index of the clicked legend item.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a legend item is clicked.Signature:function(event: React.MouseEvent&lt;HTMLButtonElement, MouseEvent&gt;, legendItem: SeriesLegendItemContext, index: number) =&gt; voidevent The click event.legendItem The legend item data.index The index of the clicked legend item.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
 #' }
@@ -349,9 +349,9 @@ NULL
 #'  \item anchorEl `HTML element, object, func` \cr Default is - An HTML element, virtualElement, or a function that returns either. It's used to set the position of the popper. The return value will passed as the reference object of the Popper instance.
 #'  \item classes `object` \cr Default is - Override or extend the styles applied to the component.See CSS classes API below for more details.
 #'  \item component `elementType` \cr Default is - The component used for the root node. Either a string to use a HTML element or a component.
-#'  \item components ` Root?: elementType ` \cr Default is  The components used for each slot inside the Popper. Either a string to use a HTML element or a component.Deprecated－use the slots prop instead. This prop will be removed in a future major release. How to migrate.
-#'  \item componentsProps ` root?: func, object ` \cr Default is  The props used for each slot inside the Popper.Deprecated－use the slotProps prop instead. This prop will be removed in a future major release. How to migrate.
-#'  \item container `(props, propName) =>
+#'  \item components ` Root?: elementType ` \cr Default is  The components used for each slot inside the Popper. Either a string to use a HTML element or a component.Deprecated-use the slots prop instead. This prop will be removed in a future major release. How to migrate.
+#'  \item componentsProps ` root?: func, object ` \cr Default is  The props used for each slot inside the Popper.Deprecated-use the slotProps prop instead. This prop will be removed in a future major release. How to migrate.
+#'  \item container `HTML element, func` \cr Default is - An HTML element or function that returns one. The container will have the portal children appended to it.
 #'  \item disablePortal `bool` \cr Default is FALSE The children will be under the DOM hierarchy of the parent component.
 #'  \item keepMounted `bool` \cr Default is FALSE Always keep the children in the DOM. This prop can be useful in SEO situation or when you want to maximize the responsiveness of the Popper.
 #'  \item modifiers `Array< data?: object, effect?: func, enabled?: bool, fn?: func, name?: any, options?: object, phase?: 'afterMain', 'afterRead', 'afterWrite', 'beforeMain', 'beforeRead', 'beforeWrite', 'main', 'read', 'write', requires?: Array<string>, requiresIfExists?: Array<string> >` \cr Default is - Popper.js is based on a "plugin-like" architecture, most of its features are fully encapsulated "modifiers".A modifier is a function that is called each time Popper.js needs to compute the position of the popper. For this reason, modifiers should be very performant to avoid bottlenecks. To learn how to create a modifier, read the modifiers documentation.
@@ -385,9 +385,9 @@ NULL
 #'  \item children `node` \cr Default is - Popper render function or node.
 #'  \item classes `object` \cr Default is - Override or extend the styles applied to the component.See CSS classes API below for more details.
 #'  \item component `elementType` \cr Default is - The component used for the root node. Either a string to use a HTML element or a component.
-#'  \item components ` Root?: elementType ` \cr Default is  The components used for each slot inside the Popper. Either a string to use a HTML element or a component.Deprecated－use the slots prop instead. This prop will be removed in a future major release. How to migrate.
-#'  \item componentsProps ` root?: func, object ` \cr Default is  The props used for each slot inside the Popper.Deprecated－use the slotProps prop instead. This prop will be removed in a future major release. How to migrate.
-#'  \item container `(props, propName) =>
+#'  \item components ` Root?: elementType ` \cr Default is  The components used for each slot inside the Popper. Either a string to use a HTML element or a component.Deprecated-use the slots prop instead. This prop will be removed in a future major release. How to migrate.
+#'  \item componentsProps ` root?: func, object ` \cr Default is  The props used for each slot inside the Popper.Deprecated-use the slotProps prop instead. This prop will be removed in a future major release. How to migrate.
+#'  \item container `HTML element, func` \cr Default is - An HTML element or function that returns one. The container will have the portal children appended to it.
 #'  \item disablePortal `bool` \cr Default is FALSE The children will be under the DOM hierarchy of the parent component.
 #'  \item keepMounted `bool` \cr Default is FALSE Always keep the children in the DOM. This prop can be useful in SEO situation or when you want to maximize the responsiveness of the Popper.
 #'  \item modifiers `Array< data?: object, effect?: func, enabled?: bool, fn?: func, name?: any, options?: object, phase?: 'afterMain', 'afterRead', 'afterWrite', 'beforeMain', 'beforeRead', 'beforeWrite', 'main', 'read', 'write', requires?: Array<string>, requiresIfExists?: Array<string> >` \cr Default is - Popper.js is based on a "plugin-like" architecture, most of its features are fully encapsulated "modifiers".A modifier is a function that is called each time Popper.js needs to compute the position of the popper. For this reason, modifiers should be very performant to avoid bottlenecks. To learn how to create a modifier, read the modifiers documentation.
@@ -443,8 +443,8 @@ NULL
 #'  \item labelStyle `object` \cr Default is - The style applied to the axis label.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
-#'  \item tickInterval `'auto', array, func` \cr Default is 'auto' Defines which ticks are displayed. Its value can be: - 'auto' In such case the ticks are computed based on axis scale and other parameters. - a filtering function of the form (value, index) => boolean which is available only if the axis has "point" scale. - an array containing the values where ticks should be displayed.
-#'  \item tickLabelInterval `'auto', func` \cr Default is 'auto' Defines which ticks get its label displayed. Its value can be: - 'auto' In such case, labels are displayed if they do not overlap with the previous one. - a filtering function of the form (value, index) => boolean. Warning: the index is tick index, not data ones.
+#'  \item tickInterval `'auto', array, func` \cr Default is 'auto' Defines which ticks are displayed. Its value can be: - 'auto' In such case the ticks are computed based on axis scale and other parameters. - a filtering function of the form (value, index) =&gt; boolean which is available only if the axis has "point" scale. - an array containing the values where ticks should be displayed.
+#'  \item tickLabelInterval `'auto', func` \cr Default is 'auto' Defines which ticks get its label displayed. Its value can be: - 'auto' In such case, labels are displayed if they do not overlap with the previous one. - a filtering function of the form (value, index) =&gt; boolean. Warning: the index is tick index, not data ones.
 #'  \item tickLabelMinGap `number` \cr Default is 4 The minimum gap in pixels between two tick labels. If two tick labels are closer than this minimum gap, one of them will be hidden.
 #'  \item tickLabelPlacement `'middle', 'tick'` \cr Default is 'middle' The placement of ticks label. Can be the middle of the band, or the tick position. Only used if scale is 'band'.
 #'  \item tickLabelStyle `object` \cr Default is - The style applied to ticks text.
@@ -476,8 +476,8 @@ NULL
 #'  \item labelStyle `object` \cr Default is - The style applied to the axis label.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
-#'  \item tickInterval `'auto', array, func` \cr Default is 'auto' Defines which ticks are displayed. Its value can be: - 'auto' In such case the ticks are computed based on axis scale and other parameters. - a filtering function of the form (value, index) => boolean which is available only if the axis has "point" scale. - an array containing the values where ticks should be displayed.
-#'  \item tickLabelInterval `'auto', func` \cr Default is 'auto' Defines which ticks get its label displayed. Its value can be: - 'auto' In such case, labels are displayed if they do not overlap with the previous one. - a filtering function of the form (value, index) => boolean. Warning: the index is tick index, not data ones.
+#'  \item tickInterval `'auto', array, func` \cr Default is 'auto' Defines which ticks are displayed. Its value can be: - 'auto' In such case the ticks are computed based on axis scale and other parameters. - a filtering function of the form (value, index) =&gt; boolean which is available only if the axis has "point" scale. - an array containing the values where ticks should be displayed.
+#'  \item tickLabelInterval `'auto', func` \cr Default is 'auto' Defines which ticks get its label displayed. Its value can be: - 'auto' In such case, labels are displayed if they do not overlap with the previous one. - a filtering function of the form (value, index) =&gt; boolean. Warning: the index is tick index, not data ones.
 #'  \item tickLabelPlacement `'middle', 'tick'` \cr Default is 'middle' The placement of ticks label. Can be the middle of the band, or the tick position. Only used if scale is 'band'.
 #'  \item tickLabelStyle `object` \cr Default is - The style applied to ticks text.
 #'  \item tickMaxStep `number` \cr Default is - Maximal step between two ticks. When using time data, the value is assumed to be in ms. Not supported by categorical axis (band, points).
@@ -579,7 +579,8 @@ NULL
 
 #' GaugeReferenceArc
 #'
-#' @description \url{https://mui.com/x/api/charts/gauge-reference-arc/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -595,7 +596,8 @@ NULL
 
 #' GaugeValueArc
 #'
-#' @description \url{https://mui.com/x/api/charts/gauge-value-arc/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -611,7 +613,8 @@ NULL
 
 #' GaugeValueText
 #'
-#' @description \url{https://mui.com/x/api/charts/gauge-value-text/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -652,9 +655,9 @@ NULL
 #'  \item localeText `object` \cr Default is - Localized text for chart components.
 #'  \item margin `number,  bottom?: number, left?: number, right?: number, top?: number ` \cr Default is - The margin between the SVG and the drawing area. It's used for leaving some space for extra information such as the x- and y-axis or legend.Accepts a number to be used on all sides or an object with the optional properties: top, bottom, left, and right.
 #'  \item onAreaClick `func` \cr Default is - Callback fired when an area element is clicked.
-#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) => voidevent The mouse event recorded on the <svg/> element.data The data about the clicked axis and items associated with it.
-#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) => voidhighlightedItem The newly highlighted item.
-#'  \item onHighlightedAxisChange `func` \cr Default is - The function called when the pointer position corresponds to a new axis data item. This update can either be caused by a pointer movement, or an axis update. In case of multiple axes, the function is called if at least one axis is updated. The argument contains the identifier for all axes with a data property.Signature:function(axisItems: Array<AxisItemIdentifier>) => voidaxisItems The array of axes item identifiers.
+#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) =&gt; voidevent The mouse event recorded on the &lt;svg/&gt; element.data The data about the clicked axis and items associated with it.
+#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) =&gt; voidhighlightedItem The newly highlighted item.
+#'  \item onHighlightedAxisChange `func` \cr Default is - The function called when the pointer position corresponds to a new axis data item. This update can either be caused by a pointer movement, or an axis update. In case of multiple axes, the function is called if at least one axis is updated. The argument contains the identifier for all axes with a data property.Signature:function(axisItems: Array&lt;AxisItemIdentifier&gt;) =&gt; voidaxisItems The array of axes item identifiers.
 #'  \item onLineClick `func` \cr Default is - Callback fired when a line element is clicked.
 #'  \item onMarkClick `func` \cr Default is - Callback fired when a mark element is clicked.
 #'  \item showToolbar `bool` \cr Default is FALSE If true, shows the default chart toolbar.
@@ -714,7 +717,7 @@ NULL
 #'
 #' @details
 #' \itemize{
-#'  \item onItemClick `func` \cr Default is - Callback fired when a line item is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, lineItemIdentifier: LineItemIdentifier) => voidevent The event source of the callback.lineItemIdentifier The line item identifier.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a line item is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, lineItemIdentifier: LineItemIdentifier) =&gt; voidevent The event source of the callback.lineItemIdentifier The line item identifier.
 #'  \item skipAnimation `bool` \cr Default is FALSE If true, animations are skipped.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
@@ -753,7 +756,7 @@ NULL
 #'
 #' @details
 #' \itemize{
-#'  \item onItemClick `func` \cr Default is - Callback fired when a line mark item is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, lineItemIdentifier: LineItemIdentifier) => voidevent The event source of the callback.lineItemIdentifier The line mark item identifier.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a line mark item is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, lineItemIdentifier: LineItemIdentifier) =&gt; voidevent The event source of the callback.lineItemIdentifier The line mark item identifier.
 #'  \item skipAnimation `bool` \cr Default is - If true, animations are skipped.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
@@ -824,7 +827,7 @@ NULL
 #'  \item faded ` additionalRadius?: number, arcLabelRadius?: number, color?: string, cornerRadius?: number, innerRadius?: number, outerRadius?: number, paddingAngle?: number ` \cr Default is  additionalRadius: -5  Override the arc attributes when it is faded.
 #'  \item highlighted ` additionalRadius?: number, arcLabelRadius?: number, color?: string, cornerRadius?: number, innerRadius?: number, outerRadius?: number, paddingAngle?: number ` \cr Default is - Override the arc attributes when it is highlighted.
 #'  \item innerRadius `number` \cr Default is 0 The radius between circle center and the beginning of the arc.
-#'  \item onItemClick `func` \cr Default is - Callback fired when a pie item is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, pieItemIdentifier: PieItemIdentifier, item: DefaultizedPieValueType) => voidevent The event source of the callback.pieItemIdentifier The pie item identifier.item The pie item.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a pie item is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, pieItemIdentifier: PieItemIdentifier, item: DefaultizedPieValueType) =&gt; voidevent The event source of the callback.pieItemIdentifier The pie item identifier.item The pie item.
 #'  \item paddingAngle `number` \cr Default is 0 The padding angle (deg) between two arcs.
 #'  \item skipAnimation `bool` \cr Default is FALSE If true, animations are skipped.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
@@ -848,10 +851,10 @@ NULL
 #'  \item axisId `number, string` \cr Default is The first axis item. The id of the axis item with the color configuration to represent.
 #'  \item classes `object` \cr Default is - Override or extend the styles applied to the component.See CSS classes API below for more details.
 #'  \item direction `'horizontal', 'vertical'` \cr Default is 'horizontal' The direction of the legend layout.
-#'  \item labelFormatter `func` \cr Default is - Format the legend labels.Signature:function(params: PiecewiseLabelFormatterParams) => string | nullparams The bound of the piece to format.
+#'  \item labelFormatter `func` \cr Default is - Format the legend labels.Signature:function(params: PiecewiseLabelFormatterParams) =&gt; string | nullparams The bound of the piece to format.
 #'  \item labelPosition `'start', 'end', 'extremes', 'inline-start', 'inline-end'` \cr Default is 'extremes' Where to position the labels relative to the gradient.
 #'  \item markType `'square', 'circle', 'line'` \cr Default is 'square' The type of the mark.
-#'  \item onItemClick `func` \cr Default is - Callback fired when a legend item is clicked.Signature:function(event: React.MouseEvent<HTMLButtonElement, MouseEvent>, legendItem: PiecewiseColorLegendItemContext, index: number) => voidevent The click event.legendItem The legend item data.index The index of the clicked legend item.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a legend item is clicked.Signature:function(event: React.MouseEvent&lt;HTMLButtonElement, MouseEvent&gt;, legendItem: PiecewiseColorLegendItemContext, index: number) =&gt; voidevent The click event.legendItem The legend item data.index The index of the clicked legend item.
 #' }
 #'
 #' @md
@@ -877,7 +880,7 @@ NULL
 #'  \item loading `bool` \cr Default is FALSE If true, a loading overlay is displayed.
 #'  \item localeText `object` \cr Default is - Localized text for chart components.
 #'  \item margin `number,  bottom?: number, left?: number, right?: number, top?: number ` \cr Default is - The margin between the SVG and the drawing area. It's used for leaving some space for extra information such as the x- and y-axis or legend.Accepts a number to be used on all sides or an object with the optional properties: top, bottom, left, and right.
-#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) => voidhighlightedItem The newly highlighted item.
+#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) =&gt; voidhighlightedItem The newly highlighted item.
 #'  \item onItemClick `func` \cr Default is - Callback fired when a pie arc is clicked.
 #'  \item showToolbar `bool` \cr Default is FALSE If true, shows the default chart toolbar.
 #'  \item skipAnimation `bool` \cr Default is - If true, animations are skipped. If unset or false, the animations respects the user's prefers-reduced-motion setting.
@@ -899,7 +902,7 @@ NULL
 #'
 #' @details
 #' \itemize{
-#'  \item onItemClick `func` \cr Default is - Callback fired when a pie item is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, pieItemIdentifier: PieItemIdentifier, item: DefaultizedPieValueType) => voidevent The event source of the callback.pieItemIdentifier The pie item identifier.item The pie item.
+#'  \item onItemClick `func` \cr Default is - Callback fired when a pie item is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, pieItemIdentifier: PieItemIdentifier, item: DefaultizedPieValueType) =&gt; voidevent The event source of the callback.pieItemIdentifier The pie item identifier.item The pie item.
 #'  \item skipAnimation `bool` \cr Default is FALSE If true, animations are skipped.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
@@ -969,16 +972,16 @@ NULL
 #'  \item loading `bool` \cr Default is FALSE If true, a loading overlay is displayed.
 #'  \item localeText `object` \cr Default is - Localized text for chart components.
 #'  \item margin `number,  bottom?: number, left?: number, right?: number, top?: number ` \cr Default is - The margin between the SVG and the drawing area. It's used for leaving some space for extra information such as the x- and y-axis or legend.Accepts a number to be used on all sides or an object with the optional properties: top, bottom, left, and right.
-#'  \item onAreaClick `func` \cr Default is - Callback fired when an area is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, radarItemIdentifier: RadarItemIdentifier) => voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
-#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) => voidevent The mouse event recorded on the <svg/> element.data The data about the clicked axis and items associated with it.
-#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) => voidhighlightedItem The newly highlighted item.
-#'  \item onMarkClick `func` \cr Default is - Callback fired when a mark is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, radarItemIdentifier: RadarItemIdentifier) => voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
+#'  \item onAreaClick `func` \cr Default is - Callback fired when an area is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, radarItemIdentifier: RadarItemIdentifier) =&gt; voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
+#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) =&gt; voidevent The mouse event recorded on the &lt;svg/&gt; element.data The data about the clicked axis and items associated with it.
+#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) =&gt; voidhighlightedItem The newly highlighted item.
+#'  \item onMarkClick `func` \cr Default is - Callback fired when a mark is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, radarItemIdentifier: RadarItemIdentifier) =&gt; voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
 #'  \item shape `'circular', 'sharp'` \cr Default is 'sharp' The grid shape.
 #'  \item showToolbar `bool` \cr Default is FALSE If true, shows the default chart toolbar.
 #'  \item skipAnimation `bool` \cr Default is - If true, animations are skipped. If unset or false, the animations respects the user's prefers-reduced-motion setting.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
-#'  \item stripeColor `func` \cr Default is (index) => index % 2 === 1 ? (theme.vars || theme).palette.text.secondary : 'none' Get stripe fill color. Set it to null to remove stripesSignature:function(index: number) => stringindex The index of the stripe band.
+#'  \item stripeColor `func` \cr Default is (index) =&gt; index % 2 === 1 ? (theme.vars || theme).palette.text.secondary : 'none' Get stripe fill color. Set it to null to remove stripesSignature:function(index: number) =&gt; stringindex The index of the stripe band.
 #'  \item width `number` \cr Default is - The width of the chart in px. If not defined, it takes the width of the parent element.
 #' }
 #'
@@ -998,7 +1001,7 @@ NULL
 #'  \item classes `object` \cr Default is - Override or extend the styles applied to the component.See CSS classes API below for more details.
 #'  \item divisions `number` \cr Default is 5 The number of divisions in the radar grid.
 #'  \item shape `'circular', 'sharp'` \cr Default is 'sharp' The grid shape.
-#'  \item stripeColor `func` \cr Default is (index) => index % 2 === 1 ? (theme.vars || theme).palette.text.secondary : 'none' Get stripe fill color. Set it to null to remove stripesSignature:function(index: number) => stringindex The index of the stripe band.
+#'  \item stripeColor `func` \cr Default is (index) =&gt; index % 2 === 1 ? (theme.vars || theme).palette.text.secondary : 'none' Get stripe fill color. Set it to null to remove stripesSignature:function(index: number) =&gt; stringindex The index of the stripe band.
 #' }
 #'
 #' @md
@@ -1015,7 +1018,7 @@ NULL
 #' @details
 #' \itemize{
 #'  \item classes `object` \cr Default is NA Override or extend the styles applied to the component.See CSS classes API below for more details.
-#'  \item onItemClick `func` \cr Default is NA Callback fired when an area is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, radarItemIdentifier: RadarItemIdentifier) => voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
+#'  \item onItemClick `func` \cr Default is NA Callback fired when an area is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, radarItemIdentifier: RadarItemIdentifier) =&gt; voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
 #'  \item seriesId `string` \cr Default is NA The id of the series to display. If undefined all series are displayed.
 #' }
 #'
@@ -1033,7 +1036,7 @@ NULL
 #' @details
 #' \itemize{
 #'  \item classes `object` \cr Default is NA Override or extend the styles applied to the component.See CSS classes API below for more details.
-#'  \item onItemClick `func` \cr Default is NA Callback fired when a mark is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, radarItemIdentifier: RadarItemIdentifier) => voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
+#'  \item onItemClick `func` \cr Default is NA Callback fired when a mark is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, radarItemIdentifier: RadarItemIdentifier) =&gt; voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
 #'  \item seriesId `string` \cr Default is NA The id of the series to display. If undefined all series are displayed.
 #' }
 #'
@@ -1051,8 +1054,8 @@ NULL
 #' @details
 #' \itemize{
 #'  \item classes `object` \cr Default is NA Override or extend the styles applied to the component.See CSS classes API below for more details.
-#'  \item onAreaClick `func` \cr Default is NA Callback fired when an area is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, radarItemIdentifier: RadarItemIdentifier) => voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
-#'  \item onMarkClick `func` \cr Default is NA Callback fired when a mark is clicked.Signature:function(event: React.MouseEvent<SVGPathElement, MouseEvent>, radarItemIdentifier: RadarItemIdentifier) => voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
+#'  \item onAreaClick `func` \cr Default is NA Callback fired when an area is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, radarItemIdentifier: RadarItemIdentifier) =&gt; voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
+#'  \item onMarkClick `func` \cr Default is NA Callback fired when a mark is clicked.Signature:function(event: React.MouseEvent&lt;SVGPathElement, MouseEvent&gt;, radarItemIdentifier: RadarItemIdentifier) =&gt; voidevent The event source of the callback.radarItemIdentifier The radar item identifier.
 #'  \item seriesId `string` \cr Default is NA The id of the series to display. If undefined all series are displayed.
 #' }
 #'
@@ -1070,7 +1073,7 @@ NULL
 #' @details
 #' \itemize{
 #'  \item colorGetter `func` \cr Default is NA Function to get the color of a scatter item given its data index. The data index argument is optional. If not provided, the color for the entire series is returned. If provided, the color for the specific scatter item is returned.
-#'  \item onItemClick `func` \cr Default is NA Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event recorded on the <svg/> element.scatterItemIdentifier The scatter item identifier.
+#'  \item onItemClick `func` \cr Default is NA Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) =&gt; voidevent Mouse event recorded on the &lt;svg/&gt; element.scatterItemIdentifier The scatter item identifier.
 #' }
 #'
 #' @md
@@ -1101,10 +1104,10 @@ NULL
 #'  \item loading `bool` \cr Default is FALSE If true, a loading overlay is displayed.
 #'  \item localeText `object` \cr Default is - Localized text for chart components.
 #'  \item margin `number,  bottom?: number, left?: number, right?: number, top?: number ` \cr Default is - The margin between the SVG and the drawing area. It's used for leaving some space for extra information such as the x- and y-axis or legend.Accepts a number to be used on all sides or an object with the optional properties: top, bottom, left, and right.
-#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) => voidevent The mouse event recorded on the <svg/> element.data The data about the clicked axis and items associated with it.
-#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) => voidhighlightedItem The newly highlighted item.
-#'  \item onItemClick `func` \cr Default is - Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent The mouse event recorded on the <svg/> element if using Voronoi cells. Or the Mouse event from the scatter element, when disableVoronoi=true.scatterItemIdentifier The scatter item identifier.
-#'  \item renderer `'svg-batch', 'svg-single'` \cr Default is 'svg-single' The type of renderer to use for the scatter plot. - svg-single: Renders every scatter item in a <circle /> element. - svg-batch: Batch renders scatter items in <path /> elements for better performance with large datasets, at the cost of some limitations.                Read more: https://mui.com/x/react-charts/scatter/#performance
+#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) =&gt; voidevent The mouse event recorded on the &lt;svg/&gt; element.data The data about the clicked axis and items associated with it.
+#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) =&gt; voidhighlightedItem The newly highlighted item.
+#'  \item onItemClick `func` \cr Default is - Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) =&gt; voidevent The mouse event recorded on the &lt;svg/&gt; element if using Voronoi cells. Or the Mouse event from the scatter element, when disableVoronoi=true.scatterItemIdentifier The scatter item identifier.
+#'  \item renderer `'svg-batch', 'svg-single'` \cr Default is 'svg-single' The type of renderer to use for the scatter plot. - svg-single: Renders every scatter item in a &lt;circle /&gt; element. - svg-batch: Batch renders scatter items in &lt;path /&gt; elements for better performance with large datasets, at the cost of some limitations.                Read more: https://mui.com/x/react-charts/scatter/#performance
 #'  \item showToolbar `bool` \cr Default is FALSE If true, shows the default chart toolbar.
 #'  \item skipAnimation `bool` \cr Default is - If true, animations are skipped. If unset or false, the animations respects the user's prefers-reduced-motion setting.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
@@ -1129,8 +1132,8 @@ NULL
 #'
 #' @details
 #' \itemize{
-#'  \item onItemClick `func` \cr Default is - Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event recorded on the <svg/> element.scatterItemIdentifier The scatter item identifier.
-#'  \item renderer `'svg-batch', 'svg-single'` \cr Default is 'svg-single' The type of renderer to use for the scatter plot. - svg-single: Renders every scatter item in a <circle /> element. - svg-batch: Batch renders scatter items in <path /> elements for better performance with large datasets, at the cost of some limitations.                Read more: https://mui.com/x/react-charts/scatter/#performance
+#'  \item onItemClick `func` \cr Default is - Callback fired when clicking on a scatter item.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) =&gt; voidevent Mouse event recorded on the &lt;svg/&gt; element.scatterItemIdentifier The scatter item identifier.
+#'  \item renderer `'svg-batch', 'svg-single'` \cr Default is 'svg-single' The type of renderer to use for the scatter plot. - svg-single: Renders every scatter item in a &lt;circle /&gt; element. - svg-batch: Batch renders scatter items in &lt;path /&gt; elements for better performance with large datasets, at the cost of some limitations.                Read more: https://mui.com/x/react-charts/scatter/#performance
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
 #' }
@@ -1164,17 +1167,17 @@ NULL
 #'  \item id `string` \cr Default is - This prop is used to help implement the accessibility logic. If you don't provide this prop. It falls back to a randomly generated id.
 #'  \item localeText `object` \cr Default is - Localized text for chart components.
 #'  \item margin `number,  bottom?: number, left?: number, right?: number, top?: number ` \cr Default is 5 The margin between the SVG and the drawing area. It's used for leaving some space for extra information such as the x- and y-axis or legend.Accepts a number to be used on all sides or an object with the optional properties: top, bottom, left, and right.
-#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) => voidevent The mouse event recorded on the <svg/> element.data The data about the clicked axis and items associated with it.
-#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) => voidhighlightedItem The newly highlighted item.
-#'  \item onHighlightedAxisChange `func` \cr Default is - The function called when the pointer position corresponds to a new axis data item. This update can either be caused by a pointer movement, or an axis update. In case of multiple axes, the function is called if at least one axis is updated. The argument contains the identifier for all axes with a data property.Signature:function(axisItems: Array<AxisItemIdentifier>) => voidaxisItems The array of axes item identifiers.
-#'  \item onItemClick `func` \cr Default is - Callback fired when clicking close to an item. This is only available for scatter plot for now.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) => voidevent Mouse event caught at the svg levelscatterItemIdentifier Identify which item got clicked
+#'  \item onAxisClick `func` \cr Default is - The function called for onClick events. The second argument contains information about all line/bar elements at the current mouse position.Signature:function(event: MouseEvent, data: null | ChartsAxisData) =&gt; voidevent The mouse event recorded on the &lt;svg/&gt; element.data The data about the clicked axis and items associated with it.
+#'  \item onHighlightChange `func` \cr Default is - The callback fired when the highlighted item changes.Signature:function(highlightedItem: HighlightItemData | null) =&gt; voidhighlightedItem The newly highlighted item.
+#'  \item onHighlightedAxisChange `func` \cr Default is - The function called when the pointer position corresponds to a new axis data item. This update can either be caused by a pointer movement, or an axis update. In case of multiple axes, the function is called if at least one axis is updated. The argument contains the identifier for all axes with a data property.Signature:function(axisItems: Array&lt;AxisItemIdentifier&gt;) =&gt; voidaxisItems The array of axes item identifiers.
+#'  \item onItemClick `func` \cr Default is - Callback fired when clicking close to an item. This is only available for scatter plot for now.Signature:function(event: MouseEvent, scatterItemIdentifier: ScatterItemIdentifier) =&gt; voidevent Mouse event caught at the svg levelscatterItemIdentifier Identify which item got clicked
 #'  \item plotType `'bar', 'line'` \cr Default is 'line' Type of plot used.
 #'  \item showHighlight `bool` \cr Default is FALSE Set to true to highlight the value. With line, it shows a point. With bar, it shows a highlight band.
 #'  \item showTooltip `bool` \cr Default is FALSE Set to true to enable the tooltip in the sparkline.
 #'  \item skipAnimation `bool` \cr Default is - If true, animations are skipped. If unset or false, the animations respects the user's prefers-reduced-motion setting.
 #'  \item slotProps `object` \cr Default is  The props used for each component slot.
 #'  \item slots `object` \cr Default is  Overridable component slots.See Slots API below for more details.
-#'  \item valueFormatter `func` \cr Default is (value: number | null) => (value === null ? '' : value.toString()) Formatter used by the tooltip.Signature:function(value: number) => stringvalue The value to format.
+#'  \item valueFormatter `func` \cr Default is (value: number | null) =&gt; (value === null ? '' : value.toString()) Formatter used by the tooltip.Signature:function(value: number) =&gt; stringvalue The value to format.
 #'  \item voronoiMaxRadius `'item', number` \cr Default is - Defines the maximum distance between a scatter point and the pointer that triggers the interaction. If set to 'item', the radius is the markerSize. If undefined, the radius is assumed to be infinite.
 #'  \item width `number` \cr Default is - The width of the chart in px. If not defined, it takes the width of the parent element.
 #'  \item xAxis ` axis?: 'x', barGapRatio?: number, categoryGapRatio?: number, classes?: object, colorMap?:  colors: Array<string>, type: 'ordinal', unknownColor?: string, values?: Array<Date, number, string> ,  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, groups?: Array< getValue: func, tickLabelStyle?: object, tickSize?: number >, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'band', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  colors: Array<string>, type: 'ordinal', unknownColor?: string, values?: Array<Date, number, string> ,  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, groups?: Array< getValue: func, tickLabelStyle?: object, tickSize?: number >, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'point', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number, min?: number, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'log', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , constant?: number, data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number, min?: number, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'symlog', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number, min?: number, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'pow', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number, min?: number, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'sqrt', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number,  valueOf: func , min?: number,  valueOf: func , offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'time', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number,  valueOf: func , min?: number,  valueOf: func , offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'utc', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ,  axis?: 'x', classes?: object, colorMap?:  color: Array<string>, func, max?: Date, number, min?: Date, number, type: 'continuous' ,  colors: Array<string>, thresholds: Array<Date, number>, type: 'piecewise' , data?: array, dataKey?: string, disableLine?: bool, disableTicks?: bool, domainLimit?: 'nice', 'strict', func, height?: number, hideTooltip?: bool, id?: number, string, ignoreTooltip?: bool, label?: string, labelStyle?: object, max?: number, min?: number, offset?: number, position?: 'bottom', 'none', 'top', reverse?: bool, scaleType?: 'linear', slotProps?: object, slots?: object, sx?: Array<func, object, bool>, func, object, tickInterval?: 'auto', array, func, tickLabelInterval?: 'auto', func, tickLabelMinGap?: number, tickLabelPlacement?: 'middle', 'tick', tickLabelStyle?: object, tickMaxStep?: number, tickMinStep?: number, tickNumber?: number, tickPlacement?: 'end', 'extremities', 'middle', 'start', tickSize?: number, valueFormatter?: func ` \cr Default is - The xAxis configuration. Notice it is a single AxisConfig object, not an array of configuration.
@@ -1264,7 +1267,8 @@ NULL
 
 #' ChartsAxisHighlightPath
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-axis-highlight-path/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1275,7 +1279,8 @@ NULL
 
 #' ChartsLabel
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-label/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1286,7 +1291,8 @@ NULL
 
 #' ChartsLabelMark
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-label-mark/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1297,7 +1303,8 @@ NULL
 
 #' ChartsTooltipCell
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-tooltip-cell/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1308,7 +1315,8 @@ NULL
 
 #' ChartsTooltipPaper
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-tooltip-paper/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1319,7 +1327,8 @@ NULL
 
 #' ChartsTooltipRow
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-tooltip-row/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1330,7 +1339,8 @@ NULL
 
 #' ChartsTooltipTable
 #'
-#' @description \url{https://mui.com/x/api/charts/charts-tooltip-table/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1341,7 +1351,8 @@ NULL
 
 #' FocusedBar
 #'
-#' @description \url{https://mui.com/x/api/charts/focused-bar/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1352,7 +1363,8 @@ NULL
 
 #' FocusedLineMark
 #'
-#' @description \url{https://mui.com/x/api/charts/focused-line-mark/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1374,7 +1386,8 @@ NULL
 
 #' FocusedScatterMark
 #'
-#' @description \url{https://mui.com/x/api/charts/focused-scatter-mark/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1385,7 +1398,8 @@ NULL
 
 #' RadarDataProvider
 #'
-#' @description \url{https://mui.com/x/api/charts/radar-data-provider/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
@@ -1396,7 +1410,8 @@ NULL
 
 #' ScatterMarker
 #'
-#' @description \url{https://mui.com/x/api/charts/scatter-marker/}
+#' @description Low-level composition component of MUI X Charts. See
+#'   \url{https://mui.com/x/react-charts/composition/}.
 #'
 #' @param ... Props to pass to the component.
 #' @return Object with \code{shiny.tag} class suitable for use in the UI of a Shiny app.
