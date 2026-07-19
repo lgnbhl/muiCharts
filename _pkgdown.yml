@@ -58,6 +58,8 @@ navbar:
       href: articles/shiny.html
     - text: Quarto
       href: articles/quarto.html
+    - text: llms.txt
+      href: llms.txt
   - text: Reference
     href: reference/index.html
   - text: News
