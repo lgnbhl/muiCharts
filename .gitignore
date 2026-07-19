@@ -9,7 +9,6 @@ js/node_modules
 js/README.md
 docs
 dev
-data-raw
 inst/doc
 /.quarto/
 pkgdown
