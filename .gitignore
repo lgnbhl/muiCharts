@@ -11,6 +11,5 @@ docs
 dev
 inst/doc
 /.quarto/
-pkgdown
 CRAN-SUBMISSION
 .RData
