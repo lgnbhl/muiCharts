@@ -13,12 +13,17 @@ status](https://www.r-pkg.org/badges/version/muiCharts)](https://CRAN.R-project.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow-E4405F?style=social&logo=linkedin)](https://www.linkedin.com/in/FelixLuginbuhl)
 <!-- badges: end -->
 
-**muiCharts** gives access to *MUI X Charts* React chart components for
-data visualization from R.
+**muiCharts** gives access to [MUI X
+Charts](https://mui.com/x/react-charts/) React chart components for data
+visualization from R.
 
 ## Install
 
-You can install the development version of **muiCharts** like so:
+``` r
+install.packages("muiCharts")
+```
+
+You can install the development version of muiCharts like so:
 
 ``` r
 remotes::install_github("lgnbhl/muiCharts")
