@@ -44,7 +44,7 @@ BarChart(
 )
 ```
 
-<img src="https://raw.githubusercontent.com/lgnbhl/muiCharts/refs/heads/master/man/Figures/BarChart.png" alt="BarChart example" style="padding:1px;border:thin solid black;"/>
+<img src="https://raw.githubusercontent.com/lgnbhl/muiCharts/refs/heads/master/man/figures/BarChart.png" alt="BarChart example" style="padding:1px;border:thin solid black;"/>
 
 ### Resources
 
